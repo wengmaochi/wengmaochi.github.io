@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Undergraduate Student
+role: Undergraduate Student/ Digital Circuit Research Intern
 
 # Organizations/Affiliations to show in About widget
 organizations:
