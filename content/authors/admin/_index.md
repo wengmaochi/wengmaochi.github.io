@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Mao-Chi Weng
+title: Mao-Chi (Tom) Weng
 
 # Name pronunciation (optional)
 # name_pronunciation: Chien Shiung Wu
@@ -39,6 +39,7 @@ education:
     - course: BS in Electrical Engineering
       institution: National Taiwan University
       year: 2024 (Expected)
+
     - course: International Exchange Student Program
       institution: Leiden University
       year: 2024 
@@ -90,22 +91,22 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '/#contact'
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-    label: Follow me on Twitter
-    display:
-      header: true
+    link: 'tom1107tom80@gmail.com'
+  # - icon: twitter
+  #   icon_pack: fab
+  #   link: https://twitter.com/GeorgeCushen
+  #   label: Follow me on Twitter
+  #   display:
+  #     header: true
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
     link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://github.com/wengmaochi
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: https://www.linkedin.com/in/mao-chi-weng/
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
