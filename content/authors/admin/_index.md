@@ -39,6 +39,9 @@ education:
     - course: BS in Electrical Engineering
       institution: National Taiwan University
       year: 2024 (Expected)
+    - course: International Exchange Student Program
+      institution: Leiden University
+      year: 2024 
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
