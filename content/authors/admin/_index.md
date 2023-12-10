@@ -29,9 +29,9 @@ bio: My research interests include lll.
 
 # Interests to show in About widget
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Computer Architecture
+  - Hardware Accelerator for Machine Learning Workloads 
+  - Machine Learning SW/HW Co-design
 
 # Education to show in About widget
 education:
