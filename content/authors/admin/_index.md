@@ -6,8 +6,8 @@ title: Mao-Chi (Tom) Weng
 # name_pronunciation: Chien Shiung Wu
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Mao-Chi 
+last_name: Weng
 
 # Status emoji
 status:
@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Undergraduate Student/ Digital Circuit Research Intern
+role: Undergraduate Student #/ Digital Circuit Research Intern
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -43,6 +43,9 @@ education:
     - course: International Exchange Student Program
       institution: Leiden University
       year: 2024 
+      
+Work Experience:
+  - Digital Circuit Research Intern - ITRI
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
