@@ -1,8 +1,10 @@
 ---
-title: Example Project
+title: Retraining-free Constraint-aware Token Pruning for Vision Transformer on Edge Devices
 summary: An example of using the in-built project page.
 tags:
   - Deep Learning
+  - Vision Transformer
+  - Hardware-aware ML
 date: '2016-04-27T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
@@ -12,11 +14,11 @@ image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 
-links:
-  - icon: twitter
-    icon_pack: fab
-    name: Follow
-    url: https://twitter.com/georgecushen
+# links:
+#   - icon: twitter
+#     icon_pack: fab
+#     name: Follow
+#     url: https://twitter.com/georgecushen
 url_code: ''
 url_pdf: ''
 url_slides: ''
