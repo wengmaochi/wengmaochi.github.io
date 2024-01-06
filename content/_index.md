@@ -85,7 +85,7 @@ sections:
           description: Delivered a 20-minute lecture in class and held weekly TA sessions for 60+ NTUEE undergraduate students.
     design:
       columns: '2'
-  - block: accomplishments
+  - block: Honors&Awards
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
       title: 'Accomplish&shy;ments'
@@ -182,14 +182,14 @@ sections:
       view: showcase
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
-  - block: markdown
-    content:
-      title: Gallery
-      subtitle: ''
-      text: |-
-        {{< gallery album="demo" >}}
-    design:
-      columns: '1'
+  # - block: markdown
+  #   content:
+  #     title: Gallery
+  #     subtitle: ''
+  #     text: |-
+  #       {{< gallery album="demo" >}}
+  #   design:
+  #     columns: '1'
   - block: collection
     id: featured
     content:
