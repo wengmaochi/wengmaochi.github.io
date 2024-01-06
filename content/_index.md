@@ -78,7 +78,7 @@ sections:
         - title: Teaching Assistant
           company: National Taiwan University 
           company_url: ''
-          company_logo: NTUicon.png
+          company_logo: NTUicon
           location: Taiwan
           date_start: '2021-09-91'
           date_end: '2022-1-31'
