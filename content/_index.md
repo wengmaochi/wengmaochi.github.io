@@ -50,7 +50,7 @@ sections:
       username: admin
     design:
       columns: '1'
-  - block: experience
+  - block: Work & Teaching experience
     content:
       title: Experience
       # Date format for experience
@@ -64,7 +64,7 @@ sections:
       items:
         - title: Digital Circuit Research Intern
           company: Industrial Technology Research Institute
-          company_url: 'https://www.itri.org.tw/english/index.aspx'
+          company_url: ''
           # company_logo: org-gc
           company_logo: itrilogo
           location: Taiwan
@@ -77,7 +77,7 @@ sections:
               * Proposed a modified Integer Linear Programming (ILP)-based hierarchical CGRA mapping algorithm and reduced 35%-50% compilation time of SOTA mapping algorithm.
         - title: Teaching Assistant
           company: National Taiwan University 
-          company_url: 'https://www.ntu.edu.tw/english/'
+          company_url: ''
           company_logo: NTUicon
           location: Taiwan
           date_start: '2021-09-91'
