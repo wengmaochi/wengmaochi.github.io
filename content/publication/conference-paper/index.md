@@ -41,10 +41,9 @@ tags: [Vision Transformer]
 featured: true
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
-
+links:
+- name: Custom Link
+  url: http://example.org
 url_pdf: 'https://drive.google.com/file/d/1oEraoejefcmSlQKYe6XS5XxVSqlObkZE/view'
 #url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 #url_dataset: 'https://github.com/HugoBlox/hugo-blox-builder'
