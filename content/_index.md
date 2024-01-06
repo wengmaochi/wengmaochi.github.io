@@ -67,23 +67,22 @@ sections:
           company_url: 'https://www.itri.org.tw/english/index.aspx'
           # company_logo: org-gc
           company_logo: itrilogo
-          location: Hsinchu, Taiwan
+          location: Taiwan
           date_start: '2023-04-01'
           date_end: '2023-12-31'
           description: |2-
               Responsibilities include:
 
-              * Analysing
-              * Modelling
-              * Deploying
+              * Visualized DFG - PE mapping process in Coarse-Grained Reconfigurable Array(CGRA) frameworks.
+              * Proposed a modified Integer Linear Programming (ILP)-based hierarchical CGRA mapping algorithm and reduced 35%-50% compilation time of SOTA mapping algorithm.
         - title: Teaching Assistant
           company: National Taiwan University 
           company_url: 'https://www.ntu.edu.tw/english/'
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          company_logo: NTUicon
+          location: Taiwan
+          date_start: '2021-09-91'
+          date_end: '2022-1-31'
+          description: Delivered a 20-minute lecture in class and held weekly TA sessions for 60+ NTUEE undergraduate students.
     design:
       columns: '2'
   - block: accomplishments
