@@ -67,7 +67,7 @@ sections:
           company_url: ''
           # company_logo: org-gc
           company_logo: itrilogo
-          location: Taiwan
+          location: Hsinchu, Taiwan
           date_start: '2023-04-01'
           date_end: '2023-12-31'
           description: |2-
@@ -79,7 +79,7 @@ sections:
           company: National Taiwan University 
           company_url: ''
           company_logo: national-taiwan-university-seeklogo.com-3
-          location: Taiwan
+          location: Taipei, Taiwan
           date_start: '2021-09-01'
           date_end: '2022-01-31'
           description: Delivered a 20-minute lecture in class and held weekly TA sessions for 60+ NTUEE undergraduate students.
