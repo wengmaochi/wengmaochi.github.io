@@ -62,5 +62,6 @@ d(x,y) & \text{if } \psi(x,y) == 1.\end{cases}$$
 
 
 # Reference
-[1] A. Aguilar-González, M. Pérez-Patricio, M. Arias-Estrada, J. -L. Camas-Anzueto, H. -R. Hernández-de León and A. Sánchez-Alegría, "An FPGA Correlation-Edge Distance approach for disparity map," 2015 International Conference on Electronics, Communications and Computers (CONIELECOMP), Cholula, Mexico, 2015, pp. 21-28, doi: 10.1109/CONIELECOMP.2015.7086952.
+[1] A. Aguilar-González, M. Pérez-Patricio, M. Arias-Estrada, J. -L. Camas-Anzueto, H. -R. Hernández-de León and A. Sánchez-Alegría, "An FPGA Correlation-Edge Distance approach for disparity map," 2015 International Conference on Electronics, Communications and Computers (CONIELECOMP), Cholula, Mexico, 2015, pp. 21-28, doi: 10.1109/CONIELECOMP.2015.7086952. 
+
 [2] Madaín Pérez Patricio, Abiel Aguilar-González, "FPGA implementation of an efficient similarity-based adaptive window algorithm for real-time stereo matching," J. Real Time Image Process. 16(2): 271-287 (2019)
