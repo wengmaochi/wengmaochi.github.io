@@ -4,7 +4,7 @@ date: 2019-07-12
 math: true
 image:
   placement: 2
-  caption: 'Image credit: [**John Moeses Bauan**](https://unsplash.com/photos/OGZtQF8iC0g)'
+  caption: 'overview of RCTP'
 ---
 
 
@@ -20,25 +20,28 @@ Within the realm of token pruning, two main branches have emerged: pruning-based
 Given the limitation of edge devices, we opt for pruning- based approaches in this work. Pruning-based methods can be further divided into retraining-based methods and retraining-free ones. Retraining-based methods like learnable token pruning [3] [4] use learned modules to make token pruning decisions. They can be constraint-aware but necessitate a repetitive retraining process when the constraint changes. On the other hand, ATS [5], a retraining-free method, adaptively prunes tokens by sampling over the inverse cumulative distribution function (CDF) of class attention scores. However, it requires manual adjustment of sampling time to meet varying FLOPs constraints.
 
 In this work, we propose Retraining-free Constraint-aware Token Pruning (RCTP) to address these issues. Our approach utilizes Fisher information (FI) to estimate the information loss of candidate thresholds in each transformer block. Subsequently, our modified Viterbi algorithm [6] determines threshold sets with minimum FI loss suitable for specific FLOPs constraints.
-### Methodology
-#### Overview:
+# Methodology
+## Overview:
 
-# Step1: Construction of Candidate threshold table and FLOPs-Fisher table
-In the first stage, given a sample dataset D, we collect the class attention scores and the FI of |D| × (N − 1) non- class tokens for each transformer block, where |D| is the number of samples in dataset D and N is the number of tokens. Since we apply our threshold pruning modules between MSA and MLP modules, we obtain the FI from the output of MSA modules. We empirically find that the FI of tokens descends exponentially from shallow layers to deep layers, which leads to an ineffective assessment of token importance between blocks. Therefore, we normalize the FI block-wisely.
+## Step1: Construction of Candidate threshold table and FLOPs-Fisher table
+In the first stage, given a sample dataset D, we collect the class attention scores and the FI of $|D| × (N − 1)$ non-class tokens for each transformer block, where $|D|$ is the number of samples in dataset D and N is the number of tokens. Since we apply our threshold pruning modules between MSA and MLP modules, we obtain the FI from the output of MSA modules. We empirically find that the FI of tokens descends exponentially from shallow layers to deep layers, which leads to an ineffective assessment of token importance between blocks. Therefore, we normalize the FI block-wisely.
 
-In the second stage, we select M candidate thresholds within each transformer block to construct a candidate threshold table with a size of L × M . For simplicity, we expect these M candidate thresholds to be evenly distributed across the domain of FLOPs reduction ratio. Ideally, the m-th candidate threshold in l-th block, denoted as $θ_l_,_m$ , can approximately reduce FLOPs count by a fraction of m/M in the block. $θ_{l,m}$ is obtained by a two-step process. First, based on the number of tokens n and the embedding dimension d, the FLOPs count of a transformer block φ_BLK can be calculated as :
+In the second stage, we select M candidate thresholds within each transformer block to construct a candidate threshold table with a size of L × M . For simplicity, we expect these M candidate thresholds to be evenly distributed across the domain of FLOPs reduction ratio. Ideally, the m-th candidate threshold in l-th block, denoted as $θ_{l,m}$ , can approximately reduce FLOPs count by a fraction of m/M in the block. $θ_{l,m}$ is obtained by a two-step process. First, based on the number of tokens n and the embedding dimension $d$, the FLOPs count of a transformer block φ_BLK can be calculated as :
 {{< math >}}
 $$\phi_{BLK}(n, d) = 12 n d^2 + 2 n^2 d.$$
 {{< /math >}}
+We obtain the initial threshold θ ̃ by calulating the average
+of k-th and (k+1)-th largest class attention scores in l-th block, which is previously collected in the first stage, where k satisfies:
 {{< math >}}
 $$\phi_{BLK}(\frac{k}{|D| \times N}, d) = \frac{m}{M} \times \phi_{BLK}(N, d).$$
 {{< /math >}}
+
 ## Step2: Searching for optimal threshold set under a specific FLOPs constraint
-### Experience Result
+# Experience Result
 
-## Ablation Study
+# Ablation Study
 
-## Reference
+# Reference
 
 
 
