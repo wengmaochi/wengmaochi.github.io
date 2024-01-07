@@ -44,6 +44,8 @@ education:
       institution: Leiden University
       year: 2024 
       
+    - course: Currently looking for ECE Ph.D. position
+      
 Work Experience:
   - Digital Circuit Research Intern - ITRI
 
@@ -53,37 +55,37 @@ skills:
   - name: Programming
     items:
       - name: Python
-        description: ''
+        # description: ''
         # percent: 80
         icon: python
         icon_pack: fab
       - name: Data Science
-        description: ''
-        percent: ''
+        # description: ''
+        # percent: ''
         icon: chart-line
         icon_pack: fas
       - name: C/C++
         description: ''
-        percent: 40
-        icon: database
+        # percent: 40
+        # icon: database
         icon_pack: fas
   - name: IC-Related
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
       - name: Hiking
-        description: ''
-        percent: 60
+        # description: ''
+        # percent: 60
         icon: person-hiking
         icon_pack: fas
       - name: Cats
-        description: ''
-        percent: 100
+        # description: ''
+        # percent: 100
         icon: cat
         icon_pack: fas
       - name: Photography
-        description: ''
-        percent: 80
+        # description: ''
+        # percent: 80
         icon: camera-retro
         icon_pack: fas
 
