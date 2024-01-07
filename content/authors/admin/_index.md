@@ -50,7 +50,7 @@ Work Experience:
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
-  - name: Technical
+  - name: Programming
     items:
       - name: Python
         description: ''
@@ -62,12 +62,12 @@ skills:
         percent: ''
         icon: chart-line
         icon_pack: fas
-      - name: SQL
+      - name: C/C++
         description: ''
         percent: 40
         icon: database
         icon_pack: fas
-  - name: Hobbies
+  - name: IC-Related
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
