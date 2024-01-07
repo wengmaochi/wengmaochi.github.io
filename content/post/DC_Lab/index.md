@@ -1,10 +1,10 @@
 ---
-title: Elliptic Curve Cryptography Chip (Tape-out)
-date: 2022-06-01
+title: FPGA Correlation-based Disparity Map Estimator
+date: 2022-01-01
 math: true
 image:
   placement: 2
-  caption: 'overview of RCTP'
+  caption: ''
 ---
 This is the final project of NTUEE Digital Circuit Labortory ().
 In collaboration with H.L. Hsieh, Y.C. Yu.
