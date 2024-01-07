@@ -22,17 +22,20 @@ We reference [1] for hardware structure and [2] for algorithm. After some adjust
 
 # Algorithm
 We adopted the proposed method in [1], and it consists of three parts:
-### Sum of Absolute Difference (SAD) algorithm
+#### 1.Sum of Absolute Difference (SAD) algorithm
 The SAD algorithm is a correlation-based method with high computational efficency. Given a pixel $(x,y)$ in left image and maximum value of user-defined maximum disparity $d_{max}$, abd correlation index $Crl(x,y,s)$ is calculated for each displacement $S$ of the correlation window in right image by:
 
 {{< math >}}
-$$Crl(x,y,s) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
+$$ Crl(x,y,s) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
 {{< /math >}}
 
 And for the pixel $(x,y)$, its disparity can be determined by 
 {{< math >}}
-$$d(x,y) = $argmin_s Crl(x,y,s)$
+$$ d(x,y) = $argmin_s Crl(x,y,s)$$
 {{< /math >}}
+
+
+
 # Hardware Implementation
 
 
