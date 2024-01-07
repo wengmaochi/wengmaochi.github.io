@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="-1" y="-1"
 	 viewBox="0 0 263.3 263.2" style="enable-background:new 0 0 263.3 263.2;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#7E1A24;}
@@ -16,7 +16,7 @@
 </style>
  <g>
   <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="263.3" width="263.3" y="0px" x="0px"/>
+  <rect fill="#fff" id="canvas_background" height="263.3" width="263.3" y="-1" x="-1"/>
   <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
    <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
   </g>
