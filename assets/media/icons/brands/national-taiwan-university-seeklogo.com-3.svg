@@ -16,7 +16,7 @@
 </style>
  <g>
   <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="263" width="202" y="-1" x="-1"/>
+  <rect fill="#fff" id="canvas_background" height="263.3" width="202.3" y="-1" x="-1"/>
   <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
    <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
   </g>
