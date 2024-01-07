@@ -21,9 +21,9 @@ Given the limitation of edge devices, we opt for pruning- based approaches in th
 
 In this work, we propose Retraining-free Constraint-aware Token Pruning (RCTP) to address these issues. Our approach utilizes Fisher information (FI) to estimate the information loss of candidate thresholds in each transformer block. Subsequently, our modified Viterbi algorithm [6] determines threshold sets with minimum FI loss suitable for specific FLOPs constraints.
 ### Methodology
-## Overview:
+#### Overview:
 
-## Step1: Construction of Candidate threshold table and FLOPs-Fisher table
+# Step1: Construction of Candidate threshold table and FLOPs-Fisher table
 In the first stage, given a sample dataset D, we collect the class attention scores and the FI of |D| × (N − 1) non- class tokens for each transformer block, where |D| is the number of samples in dataset D and N is the number of tokens. Since we apply our threshold pruning modules between MSA and MLP modules, we obtain the FI from the output of MSA modules. We empirically find that the FI of tokens descends exponentially from shallow layers to deep layers, which leads to an ineffective assessment of token importance between blocks. Therefore, we normalize the FI block-wisely.
 
 In the second stage, we select M candidate thresholds within each transformer block to construct a candidate threshold table with a size of L × M . For simplicity, we expect these M candidate thresholds to be evenly distributed across the domain of FLOPs reduction ratio. Ideally, the m-th candidate threshold in l-th block, denoted as θ_l,m , can approximately reduce FLOPs count by a fraction of m/M in the block. θl,m is obtained by a two-step process. First, based on the number of tokens n and the embedding dimension d, the FLOPs count of a transformer block φ_BLK can be calculated as :
