@@ -1,5 +1,5 @@
 ---
-title: Elliptic Curve Cryptography Chip (TAPE-OUTED)
+title: Elliptic Curve Cryptography Chip (Tape-out)
 date: 2022-06-01
 math: true
 image:
@@ -19,17 +19,19 @@ Both ECC encryption and decryption consists of two same point operations - point
 ## Addition&Subtraction
 Bit-wise XOR with no carry-in and carry-out.
 ## Multipliction
-### a*b 
+#### a*b 
 Same as ordinary multiplication, but no carry-in when doing addition.
-### 2*a (square)
+#### 2*a 
 Insert zero between each bit, for example
 {{math}}
-P = 0111, 2P = 0010101 
+$P = 0111, 2P = 0010101$ 
 {{math}}
 ## Devision 
+#### a/b
+We calculate 1/b by Itoh-Tsuji Algorithm and then conduct a * 1/b.
 
 ## Modular polynomial
-
+We adopt ECC-163 standard with polynomial basis $x^163+x^7+x^6+x^3+1$. For every number, it is 163-bit and its i-th bit reprsent x^i. If arithematic result exceeds 163 bits, the number has to mod the polynomial basis $x^163+x^7+x^6+x^3+1$.
 # Hardware Implementation
 
 # Place&Route Result
