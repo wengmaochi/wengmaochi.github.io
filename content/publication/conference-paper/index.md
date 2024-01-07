@@ -6,8 +6,8 @@ title: 'Retraining-free Constraint-aware Token Pruning for Vision Transformer on
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - Yun-Chia Yu
-  - admin
-  - Min-Gaung Lin
+  - Mao-Chi Weng
+  - Min-Guang Lin
   - An-Yeu Wu
 
 # Author notes (optional)
@@ -15,7 +15,7 @@ author_notes:
   - 'Equal contribution'
   - 'Equal contribution'
 
-date: 'NNN2023-11-31T00:00:00Z'
+date: '2023-11-31T00:00:00Z'
 # doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -59,15 +59,15 @@ image:
   caption: ''
   focal_point: ''
   preview_only: false
-post: 
-  - RCTP
+# post: 
+#   - RCTP
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-  - example
+# projects:
+#   - example
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
