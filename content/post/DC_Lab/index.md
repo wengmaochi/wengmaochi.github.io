@@ -6,7 +6,8 @@ image:
   placement: 2
   caption: ''
 ---
-This is the final project of NTUEE Digital Circuit Labortory ().
+This is the final project of NTUEE Digital Circuit Labortory (EE-3016).
+
 In collaboration with H.L. Hsieh, Y.C. Yu.
 
 # Introduction
