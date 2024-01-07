@@ -20,7 +20,8 @@ The aim of this project is to implement an accelerator for Elliptic Curve Crypot
 
 We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
 ![png](img/DCLab_final_FSM.drawio.png "Finite state machine")
-![png](img/block diagram.png "Block Diagram")
+
+![png](img/block_diagram.png "Block Diagram")
 
 
 # Hardware Implementation
