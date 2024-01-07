@@ -7,16 +7,14 @@ image:
   caption: 'overview of RCTP'
 ---
 
-This is the final project of NTUEE Digital Circuit Labortory ().
-In collaboration with H.L. Hsieh, Y.C. Yu.
+This is the final project of NTUEE IC design Lab (EE4003).
 
 # Introduction
-This is a FPGA disparity calculator. It consists of one FPGA, one camera, and one screen. To calculate disparity map, user has to use the camera take two picture with different angles. The first picture is saved into SD RAM, 
+The aim of this project is to implement an accelerator for Elliptic Curve Crypotography(ECC), and go through all procedure of chip manufacturing. 
 
-
-We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, deployed on Altera DE2-115 board.  
-
-# Implementation Details
+We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
+![png](img/DCLab_final_FSM.drawio.png)
+# Algorithm
 Both ECC encryption and decryption consists of two same point operations - point doubling and point addion in Galois Field $GF(2^m)$. Since the number here is in $GF(2^m)$, the arithmetic has specital properties. 
 ## Addition&Subtraction
 Bit-wise XOR with no carry-in and carry-out.
