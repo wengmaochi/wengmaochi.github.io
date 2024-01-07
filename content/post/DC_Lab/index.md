@@ -27,7 +27,7 @@ The SAD is a correlation-based method with high computational efficency. Given a
 
 {{<math>}}
 $$Crl(x,y,s) = \summation_{u=-w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
-{{<math>}}
+{{</math>}}
 # Hardware Implementation
 
 
