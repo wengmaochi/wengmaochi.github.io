@@ -22,7 +22,7 @@ Given the limitation of edge devices, we opt for pruning- based approaches in th
 In this work, we propose Retraining-free Constraint-aware Token Pruning (RCTP) to address these issues. Our approach utilizes Fisher information (FI) to estimate the information loss of candidate thresholds in each transformer block. Subsequently, our modified Viterbi algorithm [6] determines threshold sets with minimum FI loss suitable for specific FLOPs constraints.
 ### Methodology
 ## 
-## Experience Result
+### Experience Result
 
 ## Ablation Study
 
