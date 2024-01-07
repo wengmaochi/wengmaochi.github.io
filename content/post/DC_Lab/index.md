@@ -6,6 +6,12 @@ image:
   placement: 2
   caption: 'overview of RCTP'
 ---
+This is the final project of NTUEE Digital Circuit Labortory ().
+In collaboration with H.L. Hsieh, Y.C. Yu.
+
+# Introduction
+This is a FPGA disparity calculator. It consists of one FPGA, one camera, and one screen. To calculate disparity map, user has to use the camera take two picture with different angles. The first picture is saved into SD RAM, 
+
 
 This is the final project of NTUEE IC design Lab (EE4003).
 
