@@ -3,7 +3,7 @@ title: FPGA Correlation-based Disparity Map Estimator
 date: 2022-01-01
 math: true
 image:
-  placement: 1
+  placement: 4
   caption: ''
 ---
 This is the final project of NTUEE Digital Circuit Labortory (EE-3016).
