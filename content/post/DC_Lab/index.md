@@ -25,9 +25,9 @@ We adopted the proposed method in [1], and it consists of three parts:
 ### Sum of Absolute Difference (SAD) algorithm
 The SAD is a correlation-based method with high computational efficency. Given a pixel $(x,y)$ in left image and maximum value of user-defined maximum disparity $d_{max}$, abd correlation index $Crl(x,y,s)$ is calculated for each displacement $S$ of the correlation window in right image by:
 
-{{math}}
-$$Crl(x,y,s) = \summation$$
-{{math}}
+{{<math>}}
+$$Crl(x,y,s) = \summation_{u=-w,v=-w}{}$$
+{{<math>}}
 # Hardware Implementation
 
 
