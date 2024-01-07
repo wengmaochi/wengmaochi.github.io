@@ -5,8 +5,9 @@ math: true
 image:
   placement: 4
   caption: ''
+summary: "This is the final project of NTUEE Digital Circuit Laboratory (EE-3016). In collaboration with H.L. Hsieh, Y.C. Yu."
 ---
-This is the final project of NTUEE Digital Circuit Labortory (EE-3016).
+This is the final project of NTUEE Digital Circuit Laboratory (EE-3016).
 In collaboration with H.L. Hsieh, Y.C. Yu.
 
 # Introduction
@@ -15,7 +16,6 @@ This is a FPGA disparity calculator. It consists of one FPGA, one camera, and on
 
 This is the final project of NTUEE IC design Lab (EE4003).
 We reference [1] for algorithm and [2] for hardware structure. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
-![png](img/DCLab_final_FSM.drawio.png "Finite state machine")
 
 ![png](img/block_diagram.png "Block Diagram")
 
@@ -59,6 +59,7 @@ d(x,y) & \text{if } \psi(x,y) == 1.\end{cases}$$
 {{</math>}}
 
 # Hardware Implementation
+![png](img/DCLab_final_FSM.drawio.png "Finite state machine")
 
 
 # Reference
