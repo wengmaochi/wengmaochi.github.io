@@ -22,8 +22,8 @@ We reference [1] for hardware structure and [2] for algorithm. After some adjust
 
 # Algorithm
 We adopted the proposed method in [1], and it consists of three parts:
-#### 1.Sum of Absolute Difference (SAD) algorithm
-The SAD algorithm is a correlation-based method with high computational efficency. Given a pixel $(x,y)$ in left image and maximum value of user-defined maximum disparity $d_{max}$, abd correlation index $Crl(x,y,s)$ is calculated for each displacement $S$ of the correlation window in right image by:
+#### 1. Sum of Absolute Difference (SAD) algorithm
+The SAD algorithm is a correlation-based method with high computational efficency. Given a pixel $(x,y)$ in left image and maximum value of user-defined maximum disparity $d_{max}$, and correlation index $Crl(x,y,s)$ is calculated for each displacement $S$ of the correlation window in right image by:
 
 {{< math >}}
 $$ Crl(x,y,s) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
@@ -42,6 +42,14 @@ $$distance(x,y) = \begin{cases}l=0 & \text{if }k(x,y)<\beta, \\
 l=l+1 & \text{if }k(x,y)>\beta \end{cases}$$
 {{< /math >}}
 ,where $\beta$ is the threshold value that defines an edge, and $\delta$ is $l$ or $r$.
+
+#### 3. Homogeneity parameter 
+A $\psi$ parameter corresponding to the homogeneity degree for each pixel of the left image is determined as following:
+{{< math >}}
+$$ h(x,y) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v)|$$
+$$\psi(x,y) = \begin{cases}0 & \text{if }h(x,y)/(w+1)^2 < \lambda, \\
+1 & \text{if }h(x,y)/(w+1)^2 > \lambda.\end{cases}$$
+{{< /math >}}
 # Hardware Implementation
 
 
