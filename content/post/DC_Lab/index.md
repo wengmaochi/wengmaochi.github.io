@@ -41,7 +41,7 @@ $k(x,y) = |I_{\delta}(x,y)-I_{\delta}(x-1,y)|$
 $$distance(x,y) = \begin{cases}l=0 & \text{if }k(x,y)<\beta, \\
 l=l+1 & \text{if }k(x,y)>\beta \end{cases}$$
 {{< /math >}}
-
+,where $\beta$ is the threshold value that defines an edge, and $\delta$ is $l$ or $r$.
 # Hardware Implementation
 
 
