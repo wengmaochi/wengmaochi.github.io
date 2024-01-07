@@ -7,12 +7,19 @@ image:
   caption: 'Image credit: [**John Moeses Bauan**](https://unsplash.com/photos/OGZtQF8iC0g)'
 ---
 
+
 ### Introduction 
 Vision transformer (ViT) and its variants have demonstrated great potential in various computer vision tasks. We introduce Fisher information (FI) from tokens to evaluate token importance across different transformer blocks and propose a Retraining-free Constraint-aware Token Pruning (RCTP) framework. RCTP employs a two-step process to obtain the optimal pruning thresholds without retraining under different FLOPs constraints. In the first step, a candidate threshold table and a FLOPs-Fisher table are constructed through a three-stage pipeline to record the trade-off between FLOPs and FI loss of each candidate threshold. In the second step, a modified Viterbi algorithm determines optimal threshold sets with minimum overall FI loss under different FLOPs-constraints in one shot. Our experiment illustrates that RCTP attains better accuracy-FLOPs trade-off than prior pruning-based approaches.
 
 
 ### Fisher Information
+Vision Transformer (ViT) [1] has demonstrated remarkable performance in various computer vision tasks. However, its computational complexity has posed a significant challenge when it comes to deploying it on resource-constrained edge devices. In response to this challenge, token pruning has been a promising research area to address this problem, since ViT exhibits quadratic computation costs with the number of tokens.
 
+Within the realm of token pruning, two main branches have emerged: pruning-based methods and merging-based methods. The former reduces tokens by discarding unimportant tokens, while the latter reduces tokens by merging similar ones. In terms of edge devices, merging-based methods like ToMe [2] need additional hardware to support operations like argsort and token similarity calculations, making them less ideal for edge devices with limited hardware resources.
+
+Given the limitation of edge devices, we opt for pruning- based approaches in this work. Pruning-based methods can be further divided into retraining-based methods and retraining- free ones. Retraining-based methods like learnable token prun- ing [3] [4] use learned modules to make token pruning decisions. They can be constraint-aware but necessitate a repetitive retraining process when the constraint changes. On the other hand, ATS [5], a retraining-free method, adaptively prunes tokens by sampling over the inverse cumulative distribution function (CDF) of class attention scores. However, it requires manual adjustment of sampling time to meet varying FLOPs constraints.
+
+In this work, we propose Retraining-free Constraint-aware Token Pruning (RCTP) to address these issues. Our approach utilizes Fisher information (FI) to estimate the information loss of candidate thresholds in each transformer block. Subsequently, our modified Viterbi algorithm [6] determines threshold sets with minimum FI loss suitable for specific FLOPs constraints.
 ### Methodology
 ## 
 ## Experience Result
