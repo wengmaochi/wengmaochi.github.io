@@ -127,7 +127,7 @@ sections:
           url: ''
     design:
       columns: '2'
-  - block: collection
+  - block: portfolio #collection
     id: posts
     content:
       title: Projects
