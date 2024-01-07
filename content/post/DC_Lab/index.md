@@ -34,7 +34,13 @@ And for the pixel $(x,y)$, its disparity can be determined by
 $$ d(x,y) = $argmin_s Crl(x,y,s) $$
 {{< /math >}}
 
-
+#### 2. Edge distance
+To improve vanilla SAD algorithm, [1] used edge distance to calculate the disparity of pixel from smooth surface. The nearest left edge is calculated by  
+{{< math >}}
+$k(x,y) = |I_{\delta}(x,y)-I_{\delta}(x-1,y)|$
+$$distance(x,y) = \begin{cases}l=0 & \text{if }k(x,y)<\beta, \\
+l=l+1 & \text{if }k(x,y)>\beta \end{cases}$$
+{{< /math >}}
 
 # Hardware Implementation
 
