@@ -31,7 +31,7 @@ $$ Crl(x,y,s) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
 
 And for the pixel $(x,y)$, its disparity can be determined by 
 {{< math >}}
-$$ d(x,y) = $argmin_s Crl(x,y,s)$$
+$$ d(x,y) = $argmin_s Crl(x,y,s) $$
 {{< /math >}}
 
 
