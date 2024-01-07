@@ -28,8 +28,10 @@ In the first stage, given a sample dataset D, we collect the class attention sco
 
 In the second stage, we select M candidate thresholds within each transformer block to construct a candidate threshold table with a size of L × M . For simplicity, we expect these M candidate thresholds to be evenly distributed across the domain of FLOPs reduction ratio. Ideally, the m-th candidate threshold in l-th block, denoted as θ_l,m , can approximately reduce FLOPs count by a fraction of m/M in the block. θl,m is obtained by a two-step process. First, based on the number of tokens n and the embedding dimension d, the FLOPs count of a transformer block φ_BLK can be calculated as :
 {{< math >}}
-$$\phi_{BLK}(n, d) = 12 n d^2 + 2 n^2 d.
-\phi_{BLK}(\frac{k}{|D| \times N}, d) = \frac{m}{M} \times \phi_{BLK}(N, d).$$
+$$\phi_{BLK}(n, d) = 12 n d^2 + 2 n^2 d.$$
+{{< /math >}}
+{{< math >}}
+$$\phi_{BLK}(\frac{k}{|D| \times N}, d) = \frac{m}{M} \times \phi_{BLK}(N, d).$$
 {{< /math >}}
 ## Step2: Searching for optimal threshold set under a specific FLOPs constraint
 ### Experience Result
