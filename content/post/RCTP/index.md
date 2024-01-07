@@ -7,12 +7,14 @@ image:
   caption: 'Image credit: [**John Moeses Bauan**](https://unsplash.com/photos/OGZtQF8iC0g)'
 ---
 
-## Introduction 
-Vision transformer (ViT) and its variants have demonstrated great potential in various computer vision tasks. However, intensive computation requirements with respect to the token size hinder ViT from being deployed on edge devices with diverse computation resources. Recently, token pruning has been proven to be a promising method to exploit the redundancy of tokens. However, it often requires a laborious retraining process to meet different resource constraints. In this paper, we introduce Fisher information (FI) from tokens to evaluate token importance across different transformer blocks and propose a Retraining- free Constraint-aware Token Pruning (RCTP) framework. RCTP employs a two-step process to obtain the optimal pruning thresholds without retraining under different FLOPs constraints. In the first step, a candidate threshold table and a FLOPs-Fisher table are constructed through a three-stage pipeline to record the trade-off between FLOPs and FI loss of each candidate threshold. In the second step, a modified Viterbi algorithm determines optimal threshold sets with minimum overall FI loss under different FLOPs-constraints in one shot. Our experiment illustrates that RCTP attains better accuracy-FLOPs trade-off than prior pruning-based approaches.
+### Introduction 
+Vision transformer (ViT) and its variants have demonstrated great potential in various computer vision tasks. We introduce Fisher information (FI) from tokens to evaluate token importance across different transformer blocks and propose a Retraining-free Constraint-aware Token Pruning (RCTP) framework. RCTP employs a two-step process to obtain the optimal pruning thresholds without retraining under different FLOPs constraints. In the first step, a candidate threshold table and a FLOPs-Fisher table are constructed through a three-stage pipeline to record the trade-off between FLOPs and FI loss of each candidate threshold. In the second step, a modified Viterbi algorithm determines optimal threshold sets with minimum overall FI loss under different FLOPs-constraints in one shot. Our experiment illustrates that RCTP attains better accuracy-FLOPs trade-off than prior pruning-based approaches.
 
 
-## Fisher Information
+### Fisher Information
 
+### Methodology
+## 
 ## Experience Result
 
 ## Ablation Study
