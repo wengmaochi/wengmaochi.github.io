@@ -35,13 +35,13 @@ $$ d(x,y) = $argmin_s Crl(x,y,s) $$
 {{< /math >}}
 
 #### 2. Edge distance
-To improve vanilla SAD algorithm, [1] used edge distance to calculate the disparity of pixel from smooth surface. The nearest left edge is calculated by  
+To improve vanilla SAD algorithm, [1] used edge distance to calculate the disparity of pixel from smooth surface. The nearest left edge is calculated by: 
 {{< math >}}
 $$k(x,y) = |I_{\delta}(x,y)-I_{\delta}(x-1,y)|$$
 $$distance(x,y) = \begin{cases}l=0 & \text{if }k(x,y)<\beta, \\
-l=l+1 & \text{if }k(x,y)>\beta \end{cases}$$
+l=l+1 & \text{if }k(x,y)>\beta  \end{cases}$$
 {{< /math >}}
-,where $\beta$ is the threshold value that defines an edge, and $\delta$ is $l$ or $r$.
+where $\beta$ is the threshold value that defines an edge, and $\delta$ is $l$ or $r$.
 
 #### 3. Homogeneity parameter 
 A $\psi$ parameter corresponding to the homogeneity degree for each pixel of the left image is determined as following:
@@ -50,6 +50,14 @@ $$ h(x,y) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v)|$$
 $$\psi(x,y) = \begin{cases}0 & \text{if }h(x,y)/(w+1)^2 < \lambda, \\
 1 & \text{if }h(x,y)/(w+1)^2 > \lambda.\end{cases}$$
 {{< /math >}}
+
+#### 4. Composition
+Finally, we use the $\psi$ to determine a final disprity map by assigning the values from the edge disparity map for points with uniorm texture and the values obtained from the disparity from points with uneven texture as following: 
+{{<math>}}
+$$disparity(x,y) = \begin{cases}distance(x,y) & \text{if }\psi(x,y) == 0 \lambda, \\
+d(x,y) & \text{if } \psi(x,y) == 1.\end{cases}$$
+{{</math>}}
+
 # Hardware Implementation
 
 
