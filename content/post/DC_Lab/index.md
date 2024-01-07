@@ -3,7 +3,7 @@ title: FPGA Correlation-based Disparity Map Estimator
 date: 2022-01-01
 math: true
 image:
-  placement: 2
+  placement: 1
   caption: ''
 ---
 This is the final project of NTUEE Digital Circuit Labortory (EE-3016).
@@ -20,7 +20,7 @@ This is the final project of NTUEE IC design Lab (EE4003).
 The aim of this project is to implement an accelerator for Elliptic Curve Crypotography(ECC), and go through all procedure of chip manufacturing. 
 
 We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
-![png](img/DCLab_final_FSM.drawio.png)
+![png](img/DCLab_final_FSM.drawio.png "Finite state machine")
 # Algorithm
 Both ECC encryption and decryption consists of two same point operations - point doubling and point addion in Galois Field $GF(2^m)$. Since the number here is in $GF(2^m)$, the arithmetic has specital properties. 
 ## Addition&Subtraction
