@@ -37,7 +37,7 @@ where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjace
 
 **Objective Function:** Minimize 
 {{< math >}}
-$ |\sum_{(v_i,v_j) \in \xi} \sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})| $
+$ |\sum_{(v_i,v_j) \in \varepsilon} \sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})|$
 {{< math >}}
 where $w(v_i, v_j)$ is the number of inter cluster DFG edges between CDG nodes $v_i$ and $v_j$. 
 
