@@ -15,9 +15,9 @@ Coarse-grained reconfigurable array (CGRA) is promising to be hardware accelerat
 Application loop kernels are represented as Dataflow Graph (DFG), where the nodes represent operations, and the edges represent the dependencies between operations. The compiler need to map DFG nodes onto CGRA in spatio-temporal way. One common way to represent CGRA is to use individual nodes to represent every hardware resource inside PEs and edges to represent wire information. The nodes and edges will duplicate in temporal coordinate to represent the same hardware resource in different cycles. In this way, the mapping problem is transformed from mapping applications onto CGRA to map a graph to the other graph. 
 
 # PANORAMA[1]
-The mapping problem is proven to be NP-complete. Researchers have strived to come up heuristic algorithm like Simulated Annealing[2] to solve this problem. In PANORAMA[1], they propose a hierarchical mapping approach that uses before convention mapping algorithm to reduce the search space and derive a better starting point. 
+The mapping problem is proven to be NP-complete. Researchers have strived to come up heuristic algorithm like Simulated Annealing[2] to solve this problem. In PANORAMA[1], they propose a high-level mapping approach to reduce the search space and derive a better starting point for original mapping.
 ### Overview of PANORAMA[1]
-Unlike previous methods, [1] first use spectal clustering to cluster DFG nodes into cluster dependancy graph, where nodes represent clusters of DFG nodes and edge weights represent the number of DFG edges between two clusters. Then the CDGs will be map onto CGRA cluster by the proposed algorithm. This result will be the constraint to find the starting point for later conventional mapping. 
+Unlike previous methods, PANORAMA[1] first use spectal clustering to cluster DFG nodes into cluster dependancy graph, where nodes represent clusters of DFG nodes and edge weights represent the number of DFG edges between two clusters. Then the CDGs will be map onto CGRA cluster by the proposed algorithm. This result will be the constraint to find the starting point for later mapping. 
 
 ### Cluster mapping algorithm proposed in PANORAMA[1]
 
@@ -36,7 +36,7 @@ where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjace
 **Boolean Decision Variable:** $v_{irc}$ is 1 if $i$-th CDG node $v_i \in V$ is mapped onto CGRA cluster column $c$ at the row $r$ fixed in the column-wise scattering.
 
 **Objective Function:** Minimize $ |\sum_{(v_i,v_j)\in \varepsilon}\sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})| $
-where $w(v_i, v_j)$ is the number of inter cluster DFG edges between CDG nodes $v_i$ and $v_j$. 
+<!-- where $w(v_i, v_j)$ is the number of inter cluster DFG edges between CDG nodes $v_i$ and $v_j$.  -->
 
 **Constraints:** $\forall i \in V, \sum_{c=1}{C} v_{irc} = |V_i|/(|V_D|/(R*C)), \sum_{\forall v_i \in V}v_{irc} \geq 1$
 # Observation
