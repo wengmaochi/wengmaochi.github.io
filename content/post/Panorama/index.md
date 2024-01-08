@@ -23,7 +23,9 @@ Unlike previous methods, [1] first use spectal clustering to cluster DFG nodes i
 
 #### Column-wise Scattering 
 **Boolean Decision Variable:** $v_{irc}$ is 1 if $i$-th CDG node $v_i \in V$ is not pushed onto the CGRA cluster $P_{(r+1)c}$ from $p_{rc}$, 0 otherwise. $r$aand $c$ are CGRA cluster row and column ids. 
+
 **Objective Function:** Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|)$, where |V_i| denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes.
+
 **Constraints:** 
 ## Observation
 
