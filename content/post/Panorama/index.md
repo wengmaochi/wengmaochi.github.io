@@ -27,6 +27,9 @@ Unlike previous methods, [1] first use spectal clustering to cluster DFG nodes i
 **Objective Function:** Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes.
 
 **Constraints:** 
+$$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) <= \xi 1 + \eta * v_{ir1}^m$$
+$$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) >= 2 * deg(v_{ir1}^m) - \xi 2 - \eta * (1 - v_{ir1}^m)$$
+
 ## Observation
 
 # Reference 
