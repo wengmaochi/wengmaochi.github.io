@@ -27,19 +27,23 @@ Unlike previous methods, [1] first use spectal clustering to cluster DFG nodes i
 **Objective Function:** Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes.
 
 **Constraints:** 
-$$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) \leq \xi 1 + \eta * v_{ir1}^m$$
-$$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) \geq 2 * deg(v_{ir1}^m) - \xi 2 - \eta * (1 - v_{ir1}^m)$$
-where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjacent to $v_i^m$ and $deg(v_i^m)$ is the degree of $v_i^m$. $\eta$ is a large constant value used to linearize the equations. $\xi 1$ and $\xi 2$ are integer variables used to control the number of diagonal edges allowed. 
+$$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) \leq \xi_1 + \eta * v_{ir1}^m$$
+$$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) \geq 2 * deg(v_{ir1}^m) - \xi_2 - \eta * (1 - v_{ir1}^m)$$
+where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjacent to $v_i^m$ and $deg(v_i^m)$ is the degree of $v_i^m$. $\eta$ is a large constant value used to linearize the equations. $\xi_1$ and $\xi_2$ are integer variables used to control the number of diagonal edges allowed. 
 
 ##### Row-wise Scattering 
 
 **Boolean Decision Variable:** $v_{irc}$ is 1 if $i$-th CDG node $v_i \in V$ is mapped onto CGRA cluster column $c$ at the row $r$ fixed in the column-wise scattering.
 
-**Objective Function:** Minimize $|\sum_{(v_i,v_j)\in \varepsilon}\sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})|$
+**Objective Function:** Minimize $ |\sum_{(v_i,v_j)\in \varepsilon}\sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})| $
 where $w(v_i, v_j)$ is the number of inter cluster DFG edges between CDG nodes $v_i$ and $v_j$. 
 
 **Constraints:** $\forall i \in V, \sum_{c=1}{C} v_{irc} = |V_i|/(|V_D|/(R*C)), \sum_{\forall v_i \in V}v_{irc} \geq 1$
-## Observation
+# Observation
+
+#### Column-wise Scattering
+
+#### Row-wise Scattering 
 
 # Reference 
 [1]Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
