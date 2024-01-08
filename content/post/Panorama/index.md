@@ -35,7 +35,7 @@ where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjace
 
 **Boolean Decision Variable:** $v_{irc}$ is 1 if $i$-th CDG node $v_i \in V$ is mapped onto CGRA cluster column $c$ at the row $r$ fixed in the column-wise scattering.
 
-**Objective Function:** Minimize $ |\sum_{(v_i,v_j)\in \epsilon}\sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})| $
+**Objective Function:** Minimize $ |\sum_{(v_i,v_j) \in \xi} \sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})| $
 where $w(v_i, v_j)$ is the number of inter cluster DFG edges between CDG nodes $v_i$ and $v_j$. 
 
 **Constraints:** $\forall i \in V, \sum_{c=1}{C} v_{irc} = |V_i|/(|V_D|/(R*C)), \sum_{\forall v_i \in V}v_{irc} \geq 1$
