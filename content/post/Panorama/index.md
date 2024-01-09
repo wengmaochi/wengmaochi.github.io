@@ -37,11 +37,11 @@ where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjace
 
 **Objective Function:** Minimize 
 {{< math >}}
-$ |\sum_{(v_i,v_j) \in \varepsilon} \sum_{c=1}{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})|$
+$ |\sum_{(v_i,v_j) \in \varepsilon} \sum_{c=1}^{C}w(v_i,v_j)*c*(v_{irc} - v_{jrc})|$
 {{< /math >}}
 where $w(v_i, v_j)$ is the number of inter cluster DFG edges between CDG nodes $v_i$ and $v_j$. 
 
-**Constraints:** $\forall i \in V, \sum_{c=1}{C} v_{irc} = |V_i|/(|V_D|/(R*C)), \sum_{\forall v_i \in V}v_{irc} \geq 1$
+**Constraints:** $\forall i \in V, \sum_{c=1}^{C} v_{irc} = |V_i|/(|V_D|/(R*C)), \sum_{\forall v_i \in V}v_{irc} \geq 1$
 # Observation
 After closely exminaine the ILP constraints and objective functions, I found there are some improvement can be made in each type of scattering
 #### Column-wise Scattering
