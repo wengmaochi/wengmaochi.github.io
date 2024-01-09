@@ -1,5 +1,6 @@
 ---
 title: ILP-Based Approach for High-level CGRA Kernel Loops Mapping  
+# subtitle: 
 date: 2023-11-01
 math: true
 image:
@@ -7,7 +8,8 @@ image:
   caption: 'credit: https://github.com/ecolab-nus/panorama'
 summary: "This is the side project during internship at the Industrial Technology Research Institute."
 ---
-This is the side project during internship at the Industrial Technology Research Institute. 
+<!-- This is the side project during internship at the Industrial Technology Research Institute.  -->
+
 <!-- When researching on CGRA mapping problem, I happened to read PANORAMA[1] and found some improvement could be made in the integer-linear programming (ILP) problem defined in the paper.   -->
 
 # Introduction
