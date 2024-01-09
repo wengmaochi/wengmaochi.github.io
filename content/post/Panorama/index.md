@@ -15,14 +15,17 @@ Coarse-grained reconfigurable array (CGRA) is a promising hardware accelerator f
 
 Given an application, the loop kernels are represented as Dataflow Graph (DFG), where the nodes represent operations, and the edges represent the dependencies between operations. The compiler needs to map DFG nodes onto CGRA in spatio-temporal way. One common approach to represent CGRA is to use individual nodes to represent every hardware resource inside PEs and edges to represent wire information. The nodes and edges will duplicate in temporal coordinate to represent the same hardware resource in different cycles. In this way, the mapping problem is transformed from mapping applications onto CGRA to map a graph to the other graph. 
 
-# PANORAMA[1]
+### Overview PANORAMA[1]
 This mapping problem is proven to be NP-complete. Researchers have strived to come up heuristic algorithms like Simulated Annealing[2] to solve this problem. In PANORAMA[1], they propose a high-level mapping approach to reduce the search space and derive a better starting point for original mapping.
-### Overview of PANORAMA[1]
-Unlike previous methods, PANORAMA[1] first use spectal clustering to cluster DFG nodes into cluster dependancy graph, where nodes represent clusters of DFG nodes and edge weights represent the number of DFG edges between two clusters. Then the CDGs will be map onto CGRA cluster by the proposed algorithm. This result will be the constraint to find the starting point for later mapping. 
+
+Unlike previous methods, PANORAMA[1] first use spectal clustering to cluster DFG nodes into cluster dependancy graph, where nodes represent clusters of DFG nodes and edge weights represent the number of DFG edges between two clusters. Then the CDGs will be map onto CGRA clusters by the proposed algorithm. This result will be the constraint to find the starting point for later mapping. 
 
 ### Cluster mapping algorithm proposed in PANORAMA[1]
+The goal of cluster mapping step is to equally distribute the DFG nodes on CGRA, reducing inter-cluster edge distance so that lower-level mapping would be less complex. The proposed clustering mapping algorithm is inspired by split&push algorithm[2]. The clustering mapping algorithm consists of two steps: column-wise scattering and row-wise scattering. First, all the CDG nodes are placed in a single CGRA cluster at cluster coordinate $(1,1)$. Then it splits the CDG nodes into two groups: one left on the row, and the other one is pushed into next row. This step is repeated until all the CGRA culsters in the first column are filled with nodes. 
+Then the nodes allocated in the first column are scttered row-wise to obtain the final mapping. Both column-wise and row-wise scattering are formulated as ILP problems to realize many-to-many mapping. 
 
 #### Column-wise Scattering 
+
 **Boolean Decision Variable:** $v_{irc}$ is 1 if $i$-th CDG node $v_i \in V$ is not pushed onto the CGRA cluster $P_{(r+1)c}$ from $p_{rc}$, 0 otherwise. $r$ and $c$ are CGRA cluster row and column ids. 
 
 **Objective Function:** Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes.
@@ -32,7 +35,7 @@ $$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) \leq \xi_1 + \eta * v_{ir1}^m$$
 $$ \sum_{v_j \in adj(v_i^m)} (v_{jr1}+v_{ir1}^m) \geq 2 * deg(v_{ir1}^m) - \xi_2 - \eta * (1 - v_{ir1}^m)$$
 where $v_i^m$ is the multi degree node. $adj(v_i^m)$ are the set of nodes adjacent to $v_i^m$ and $deg(v_i^m)$ is the degree of $v_i^m$. $\eta$ is a large constant value used to linearize the equations. $\xi_1$ and $\xi_2$ are integer variables used to control the number of diagonal edges allowed. 
 
-##### Row-wise Scattering 
+#### Row-wise Scattering 
 
 **Boolean Decision Variable:** $v_{irc}$ is 1 if $i$-th CDG node $v_i \in V$ is mapped onto CGRA cluster column $c$ at the row $r$ fixed in the column-wise scattering.
 
