@@ -55,7 +55,12 @@ The row-wise scattering in PANORAMA[1] does not guarantee a CDG node is mapped o
 
 Thus, forcing the CDG node is mapped on connected PEs is an improvement that can be made. The following discussion is under the setting of 16x16 CGRA and 4x4 PE cluster. 
 
-We know that for every node $v_i$, there is four variables $v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}$ to express its final location. First, we define four variables, $L, M, R, T$, where $L=v_{ir1} \oplus v_{ir2}$, $M=v_{ir2} \oplus v_{ir3}$, $R=v_{ir3} \oplus v_{ir4}$, and $T = L + M + R$, then we can construct two tables:   
+We know that for every node $v_i$, there is four variables $v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}$ to express its final location. We can use sum of XOR to formulate into an ILP constraint. For a 2-input XOR $y= x_1 \oplus x_2$ can be formulated as 
+$$ x_1+x_2+y < 3$$
+$$ x_1 + y \leqslant x_2$$
+$$ x_2 + y \leqslant x_1$$
+
+First, we define four variables, $L, M, R, T$, where $L=v_{ir1} \oplus v_{ir2}$, $M=v_{ir2} \oplus v_{ir3}$, $R=v_{ir3} \oplus v_{ir4}$, and $T = L + M + R$, then we can construct two tables:   
 
 {{< table path="valid.csv" header="true" caption="Table 1: valid combination" >}}
 {{< table path="invalid.csv" header="true" caption="Table 2: invalid combination" >}}
@@ -66,7 +71,7 @@ If we want to set a constraint make ${v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}}$ satis
 
 0010 and 0100: we can set this additional constraint only to node $v_i$ that satisfies $\sum_{\forall v_i \in V}v_{irc} > 1$
 
-0110: we can use big-M method by setting a variable v_{i,0110}
+0110: we can use big-M method by setting a variable $v_{i,0110}$,
 $$v_{i,0110} \geqslant (1-v_{ir1}) + v_{ir2} + v_{ir3} + (1-v_{ir4}) - 3 $$
 $$v_{i,0110} \leqslant (1-v_{ir1})$$
 $$v_{i,0110} \leqslant v_{ir2}$$
