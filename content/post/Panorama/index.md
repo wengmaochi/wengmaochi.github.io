@@ -4,7 +4,7 @@ date: 2023-11-01
 math: true
 image:
   placement: 4
-  caption: ''
+  caption: 'credit: https://github.com/ecolab-nus/panorama'
 summary: "This is the side project during internship at the Industrial Technology Research Institute."
 ---
 This is the side project during internship at the Industrial Technology Research Institute. 
@@ -71,9 +71,9 @@ First, we define four variables, $L, M, R, T$, where $L=v_{ir1} \oplus v_{ir2}$,
 
 If we want to set a constraint make ${v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}}$ satisfy the combination, we can set the ILP constraint as $L+M+R \leqslant 1$. However, there are some cases have to be deal with: 0000, 0010, 0100, 0110.
 
-0000: prevented from the original constraint $\sum_{\forall v_i \in V}v_{irc} \geq 1$
+0000: prevented from the original constraint $\sum_{\forall v_i \in V}v_{irc} \geq 1$.
 
-0010 and 0100: we can set this additional constraint only to node $v_i$ that satisfies $\sum_{\forall v_i \in V}v_{irc} > 1$
+0010 and 0100: we can set this additional constraint only to node $v_i$ that satisfies $\sum_{\forall v_i \in V}v_{irc} > 1$.
 
 0110: we can use big-M method by setting a variable $v_{i,0110}$,
 $$v_{i,0110} \geqslant (1-v_{ir1}) + v_{ir2} + v_{ir3} + (1-v_{ir4}) - 3 $$
@@ -82,7 +82,7 @@ $$v_{i,0110} \leqslant v_{ir2}$$
 $$v_{i,0110} \leqslant v_{ir3}$$
 $$v_{i,0110} \leqslant (1-v_{ir4})$$
 and combine all these constraint as:
-$$L+M+R \leqslant 1 + M* v_{i,0110}$$ 
+$$L+M+R \leqslant 1 + M* v_{i,0110}$$
 # Result
 Benchmark: jpegfdct, 230 DFG nodes (same in the paper)
 
@@ -91,7 +91,7 @@ Setting: num of spectal cluster = 14, CGRA PE = 16x16, PE cluster = 4x4
 {{< table path="result.csv" header="true" caption="" >}}
 
 Future work: 
-run more experiment on different benchmark with different numbers of clusters, benchmarks
+run more experiment on different benchmark with different numbers of clusters, benchmarks.
 # Reference 
 [1] Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
 
