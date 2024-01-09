@@ -7,15 +7,16 @@ image:
   caption: ''
 summary: "This is the side project during internship at the Industrial Technology Research Institute."
 ---
-This is the side project during internship at the Industrial Technology Research Institute. When researching on CGRA mapping problem, I happened to read PANORAMA[1] and found some improvement could be made in the integer-linear programming (ILP) problem defined in the paper.  
+This is the side project during internship at the Industrial Technology Research Institute. 
+<!-- When researching on CGRA mapping problem, I happened to read PANORAMA[1] and found some improvement could be made in the integer-linear programming (ILP) problem defined in the paper.   -->
 
 # Introduction
-Coarse-grained reconfigurable array (CGRA) is promising to be hardware accelerator for machine learning workloads due to its power efficiency and reconfigurability. However, its unmature software stacks and compiler for map complex loop kernels onto the architectures limits its capability. 
+Coarse-grained reconfigurable array (CGRA) is a promising hardware accelerator for machine learning workloads due to its power efficiency and reconfigurability. However, its unmature software stacks and compiler for complex loop kernels onto the architectures limits its capability. 
 
-Application loop kernels are represented as Dataflow Graph (DFG), where the nodes represent operations, and the edges represent the dependencies between operations. The compiler need to map DFG nodes onto CGRA in spatio-temporal way. One common way to represent CGRA is to use individual nodes to represent every hardware resource inside PEs and edges to represent wire information. The nodes and edges will duplicate in temporal coordinate to represent the same hardware resource in different cycles. In this way, the mapping problem is transformed from mapping applications onto CGRA to map a graph to the other graph. 
+Given an application, the loop kernels are represented as Dataflow Graph (DFG), where the nodes represent operations, and the edges represent the dependencies between operations. The compiler needs to map DFG nodes onto CGRA in spatio-temporal way. One common approach to represent CGRA is to use individual nodes to represent every hardware resource inside PEs and edges to represent wire information. The nodes and edges will duplicate in temporal coordinate to represent the same hardware resource in different cycles. In this way, the mapping problem is transformed from mapping applications onto CGRA to map a graph to the other graph. 
 
 # PANORAMA[1]
-The mapping problem is proven to be NP-complete. Researchers have strived to come up heuristic algorithm like Simulated Annealing[2] to solve this problem. In PANORAMA[1], they propose a high-level mapping approach to reduce the search space and derive a better starting point for original mapping.
+This mapping problem is proven to be NP-complete. Researchers have strived to come up heuristic algorithms like Simulated Annealing[2] to solve this problem. In PANORAMA[1], they propose a high-level mapping approach to reduce the search space and derive a better starting point for original mapping.
 ### Overview of PANORAMA[1]
 Unlike previous methods, PANORAMA[1] first use spectal clustering to cluster DFG nodes into cluster dependancy graph, where nodes represent clusters of DFG nodes and edge weights represent the number of DFG edges between two clusters. Then the CDGs will be map onto CGRA cluster by the proposed algorithm. This result will be the constraint to find the starting point for later mapping. 
 
