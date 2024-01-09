@@ -85,6 +85,7 @@ and combine all these constraint as:
 $$L+M+R \leqslant 1 + M* v_{i,0110}$$ 
 # Result
 Benchmark: jpegfdct, 230 DFG nodes (same in the paper)
+
 Setting: num of spectal cluster = 14, CGRA PE = 16x16, PE cluster = 4x4
 
 {{< table path="result.csv" header="true" caption="" >}}
