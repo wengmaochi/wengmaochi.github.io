@@ -75,6 +75,12 @@ $$v_{i,0110} \leqslant (1-v_{ir4})$$
 and combine all these constraint as:
 $$L+M+R \leqslant 1 + M* v_{i,0110}$$ 
 # Result
+Benchmark: jpegfdct, 230 DFG nodes (same in the paper)
+Setting: num of spectal cluster = 14, CGRA PE = 16x16, PE cluster = 4x4
 
+{{< table path="result.csv" header="true" caption="" >}}
+
+Future work: 
+run more experiment on different benchmark with different numbers of clusters, benchmarks
 # Reference 
 [1]Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
