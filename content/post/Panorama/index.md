@@ -55,7 +55,9 @@ The row-wise scattering in PANORAMA[1] does not guarantee a CDG node is mapped o
 
 Thus, forcing the CDG node is mapped on connected PEs is an improvement that can be made. The following discussion is under the setting of 16x16 CGRA and 4x4 PE cluster. 
 
-First, we know that for every node $v_i$, there is four variables $v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}$ to express its final location. To list 
+We know that for every node $v_i$, there is four variables $v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}$ to express its final location. First, we define four variables, $L, M, R, T$, where $L=v_{ir1} \oplus v_{ir2}$, $M=v_{ir2} \oplus v_{ir3}$, $R=v_{ir3} \oplus v_{ir4}$, and $T = L + M + R$, then we can construct two tables:   
 
+{{< table path="valid.csv" header="true" caption="Table 1: valid combination" >}}
+{{< table path="invalid.csv" header="true" caption="Table 2: invalid combination" >}}
 # Reference 
 [1]Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
