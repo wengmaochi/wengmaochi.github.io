@@ -51,7 +51,11 @@ Thus, I add a panelty term in the objective function, and the modified objective
 
 
 #### Row-wise Scattering 
-I found that the row-wise scattering in PANORAMA[1] neglects 
+The row-wise scattering in PANORAMA[1] does not guarantee a CDG node is mapped on connected PEs in a same row. Take a 16x16 CGRA and 4x4 PE as a cluster for example. Considering a row _ _ _ _, the results might be 0 1 0 1 or 1 0 0 1, which are impratical to later mapping, making the resulting starting point for later mapping suboptimal. 
+
+Thus, forcing the CDG node is mapped on connected PEs is an improvement that can be made. The following discussion is under the setting of 16x16 CGRA and 4x4 PE cluster. 
+
+First, we know that for every node $v_i$, there is four variables $v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}$ to express its final location. To list 
 
 # Reference 
 [1]Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429

@@ -1,4 +1,4 @@
-customer_id, score
-1,0
-2,0.5
-3,1
+customer_id, score,j
+1,0,9
+2,0.5,9
+3,1,0
