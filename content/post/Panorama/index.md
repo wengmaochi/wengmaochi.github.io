@@ -21,7 +21,7 @@ This mapping problem is proven to be NP-complete. Researchers have strived to co
 Unlike previous methods, PANORAMA[1] first use spectal clustering to cluster DFG nodes into cluster dependancy graph, where nodes represent clusters of DFG nodes and edge weights represent the number of DFG edges between two clusters. Then the CDGs will be map onto CGRA clusters by the proposed algorithm. This result will be the constraint to find the starting point for later mapping. 
 
 ### Cluster mapping algorithm proposed in PANORAMA[1]
-The goal of cluster mapping step is to equally distribute the DFG nodes on CGRA, reducing inter-cluster edge distance so that lower-level mapping would be less complex. The proposed clustering mapping algorithm is inspired by split&push algorithm[2]. The clustering mapping algorithm consists of two steps: column-wise scattering and row-wise scattering. First, all the CDG nodes are placed in a single CGRA cluster at cluster coordinate $(1,1)$. Then it splits the CDG nodes into two groups: one left on the row, and the other one is pushed into next row. This step is repeated until all the CGRA culsters in the first column are filled with nodes. 
+The goal of cluster mapping step is to equally distribute the DFG nodes on CGRA, reducing inter-cluster edge distance so that lower-level mapping would be less complex. The proposed clustering mapping algorithm is inspired by split&push algorithm[3][4]. The clustering mapping algorithm consists of two steps: column-wise scattering and row-wise scattering. First, all the CDG nodes are placed in a single CGRA cluster at cluster coordinate $(1,1)$. Then it splits the CDG nodes into two groups: one left on the row, and the other one is pushed into next row. This step is repeated until all the CGRA culsters in the first column are filled with nodes. 
 Then the nodes allocated in the first column are scttered row-wise to obtain the final mapping. Both column-wise and row-wise scattering are formulated as ILP problems to realize many-to-many mapping. 
 
 #### Column-wise Scattering 
@@ -93,4 +93,10 @@ Setting: num of spectal cluster = 14, CGRA PE = 16x16, PE cluster = 4x4
 Future work: 
 run more experiment on different benchmark with different numbers of clusters, benchmarks
 # Reference 
-[1]Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
+[1] Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
+
+[2] S. Kirkpatrick et al., “Optimization by simulated  annealing,” in Science’83
+
+[3] G. Di Battista et al., “A split & push approach to 3D orthogonal drawing,” in Graph Algorithms And Applications 2’04
+
+[4] J. W. Yoon et al., “A graph drawing based spatial mapping algorithm for coarsegrained reconfigurable architectures,” in VLSI’09
