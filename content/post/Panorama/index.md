@@ -47,7 +47,7 @@ After closely exminaine the ILP constraints and objective functions, I found the
 #### Column-wise Scattering
 The original column-wise scattering only consider CDG nodes that are currently in $r$-th row when deciding which nodes are pushed into next row in $r$-th scattering. However, each CGRA cluster represent a 4*4, or even more PEs. I believe that considering CDG nodes in previous rows is also important.
 
-Thus, I add a panelty term in the objective function, and the modified objective function becomes: Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|) + \sum_{v_i \in V} (v_{ir1} * p_i * \lambda)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes, $p_i = \sum_{v_j \in adj(v_i) \land v_j \in \mathbb{S}_r}(r_{current} - r_{v_j})$.
+Thus, I add a panelty term in the objective function, and the modified objective function becomes: Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|) + \sum_{v_i \in V} (v_{ir1} * p_i * \lambda)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes, $p_i = \sum_{v_j \in adj(v_i) \land v_j \in S_r}(r_{current} - r_{v_j})$.
 
 
 #### Row-wise Scattering 
@@ -59,5 +59,22 @@ We know that for every node $v_i$, there is four variables $v_{ir1}, v_{ir2}, v_
 
 {{< table path="valid.csv" header="true" caption="Table 1: valid combination" >}}
 {{< table path="invalid.csv" header="true" caption="Table 2: invalid combination" >}}
+
+If we want to set a constraint make ${v_{ir1}, v_{ir2}, v_{ir3}, v_{ir4}}$ satisfy the combination, we can set the ILP constraint as $L+M+R \leqslant 1$. However, there are some cases have to be deal with: 0000, 0010, 0100, 0110.
+
+0000: prevented from the original constraint $\sum_{\forall v_i \in V}v_{irc} \geq 1$
+
+0010 and 0100: we can set this additional constraint only to node $v_i$ that satisfies $\sum_{\forall v_i \in V}v_{irc} > 1$
+
+0110: we can use big-M method by setting a variable v_{i,0110}
+$$v_{i,0110} \geqslant (1-v_{ir1}) + v_{ir2} + v_{ir3} + (1-v_{ir4}) - 3 $$
+$$v_{i,0110} \leqslant (1-v_{ir1})$$
+$$v_{i,0110} \leqslant v_{ir2}$$
+$$v_{i,0110} \leqslant v_{ir3}$$
+$$v_{i,0110} \leqslant (1-v_{ir4})$$
+and combine all these constraint as:
+$$L+M+R \leqslant 1 + M* v_{i,0110}$$ 
+# Result
+
 # Reference 
 [1]Dhananjaya Wijerathne, Zhaoying Li, Thilini Kaushalya Bandara, and Tulika Mitra. 2022. PANORAMA: divide-and-conquer approach for mapping complex loop kernels on CGRA. In Proceedings of the 59th ACM/IEEE Design Automation Conference (DAC '22). Association for Computing Machinery, New York, NY, USA, 127–132. https://doi.org/10.1145/3489517.3530429
