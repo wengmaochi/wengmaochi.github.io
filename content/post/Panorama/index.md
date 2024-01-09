@@ -47,7 +47,7 @@ After closely exminaine the ILP constraints and objective functions, I found the
 #### Column-wise Scattering
 The original column-wise scattering only consider CDG nodes that are currently in $r$-th row when deciding which nodes are pushed into next row in $r$-th scattering. However, each CGRA cluster represent a 4*4, or even more PEs. I believe that considering CDG nodes in previous rows is also important.
 
-Thus, I add a panelty term in the objective function, and the modified objective function becomes: Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|) + \sum_{v_i \in V} (v_{ir1} * p_i * \lambda)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes, $p_i = \sum_{v_j \in adj(v_i) \land v_j \in S_r}(r_{current} - r_{v_j})$.
+Thus, I add a panelty term in the objective function, and the modified objective function becomes: Minimize $\sum_{v_i \in V}v_{ir1}*|v_i|-(|V_D / R|) + \sum_{v_i \in V} (v_{ir1} * p_i * \lambda)$, where $|V_i|$ denotes cluster size of $v_i$, $|V_D|$ denotes the total number of DFG nodes, $p_i = \sum_{v_j \in adj(v_i) \land v_j \in S_r}(r_{current} - r_{v_j})$, $S_r$ contains all the nodes $v_i$ that have been left on 0 to $r-1$ row in previous iterations.
 
 
 #### Row-wise Scattering 
