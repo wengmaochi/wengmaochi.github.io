@@ -52,7 +52,7 @@ We adopt ECC-163 standard with polynomial basis $x^{163}+x^7+x^6+x^3+1$. For eve
 
 # Hardware Implementation
 
-![png](hardware.png "Fig. Architecture of the whole chip")
+![png](hardware.png "Fig. Chip architecture")
 
 ![png](mul.png "Fig. Multiplier unit")
 # Place&Route Result
