@@ -16,7 +16,7 @@ The aim of this project is to implement an accelerator for Elliptic Curve Crypot
 We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
 ![png](design_flow.png "Fig. The design flow of our design")
 
-# Backgroun of ECC & $GF(2^m)$
+# Background of $GF(2^m)$, Polynomial Basis
 In this chip, we accelerate the two most crucial operations in both ECC encryption and decryption - point operations and point doubling over binary finite field $GF(2^m)$. Below I list how we realize $GF(2^m)$ arithematics,
 
 ## Addition&Subtraction
