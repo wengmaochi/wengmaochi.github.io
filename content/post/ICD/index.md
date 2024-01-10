@@ -14,9 +14,14 @@ image:
 The aim of this project is to implement an accelerator for Elliptic Curve Crypotography(ECC), and go through all procedure of chip manufacturing. 
 
 We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
-![png](img/DCLab_final_FSM.drawio.png)
+![png](design_flow.png "Fig. The design flow of our design")
+
+In this chip, we accelerate the two most crucial operations in both ECC Both ECC encryption and decryption - point operations and point doubling. 
+
+ Galois Field $GF(2^m)$. In this chip, Since the number here is in $GF(2^m)$, the arithmetic has specital properties. 
+
 # Algorithm
-Both ECC encryption and decryption consists of two same point operations - point doubling and point addion in Galois Field $GF(2^m)$. Since the number here is in $GF(2^m)$, the arithmetic has specital properties. 
+
 ## Addition&Subtraction
 Bit-wise XOR with no carry-in and carry-out.
 ## Multipliction
