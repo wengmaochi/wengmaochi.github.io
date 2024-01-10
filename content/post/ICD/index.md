@@ -25,13 +25,14 @@ In this chip, we accelerate the two most crucial operations in both ECC encrypti
 #### $a*b$ 
 * Same as ordinary multiplication, but no carry-in when doing addition.
 #### $a^2$
-* Insert zero between each bit, for example: $a = 0111, a^2 = 0010101$ 
+* Insert zeros between each bit, for example: $a = 0111, a^2 = 0010101$ 
 ## Devision 
 #### $a/b$
-* We calculate 1/b by Itoh-Tsuji Algorithm and then conduct a * 1/b.
+* We calculate $1/b$ by Itoh-Tsuji Algorithm and then conduct $a * 1/b$.
+* Itoh-Tsuji Algorithm: 
 
 ## Modular polynomial
-We adopt ECC-163 standard with polynomial basis $x^163+x^7+x^6+x^3+1$. For every number, it is 163-bit and its i-th bit reprsent x^i. If arithematic result exceeds 163 bits, the number has to mod the polynomial basis $x^163+x^7+x^6+x^3+1$.
+We adopt ECC-163 standard with polynomial basis $x^{163}+x^7+x^6+x^3+1$. For every number, it is 163-bit and its i-th bit reprsent x^i. If arithematic result exceeds 163 bits, the number has to mod the polynomial basis $x^{163}+x^7+x^6+x^3+1$.
 
 
 # Hardware Implementation
