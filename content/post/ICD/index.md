@@ -1,11 +1,12 @@
 ---
 title: Elliptic Curve Cryptography Chip (Tape-out)
-subtitle: This is the final project of NTUEE IC design Lab (EE4003). In collaboration with Y.C. Yu, C.L. Hsieh.
 date: 2022-06-01
 math: true
 image:
   placement: 2
   caption: ''
+
+summary: This is the final project of NTUEE IC design Lab (EE4003). In collaboration with Y.C. Yu, C.L. Hsieh.
 ---
 
 
