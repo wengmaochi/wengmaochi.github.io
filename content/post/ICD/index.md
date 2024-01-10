@@ -16,19 +16,16 @@ The aim of this project is to implement an accelerator for Elliptic Curve Crypot
 We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
 ![png](design_flow.png "Fig. The design flow of our design")
 
-In this chip, we accelerate the two most crucial operations in both ECC Both ECC encryption and decryption - point operations and point doubling. 
-
- Galois Field $GF(2^m)$. In this chip, Since the number here is in $GF(2^m)$, the arithmetic has specital properties. 
-
-# Algorithm
+# ECC & $GF(2^m)$
+In this chip, we accelerate the two most crucial operations in both ECC encryption and decryption - point operations and point doubling over binary finite field $GF(2^m)$. Below I list how we realize $GF(2^m)$ arithematics,
 
 ## Addition&Subtraction
 Bit-wise XOR with no carry-in and carry-out.
 ## Multipliction
 #### a*b 
 Same as ordinary multiplication, but no carry-in when doing addition.
-#### 2*a 
-Insert zero between each bit, for example
+#### a^2
+Insert zero between each bit, for example: 
 {{math}}
 $P = 0111, 2P = 0010101$ 
 {{math}}
