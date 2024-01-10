@@ -5,25 +5,21 @@ math: true
 image:
   placement: 4
   caption: ''
-summary: "This is the final project of NTUEE Digital Circuit Laboratory (EE-3016). In collaboration with H.L. Hsieh, Y.C. Yu."
+summary: "This is the final project of NTUEE Digital Circuit Laboratory (EE3016). In collaboration with H.L. Hsieh, S.C. Yang."
 ---
-This is the final project of NTUEE Digital Circuit Laboratory (EE-3016).
-In collaboration with H.L. Hsieh, Y.C. Yu.
 
 # Introduction
 This is a FPGA disparity calculator. It consists of one FPGA, one camera, and one screen. To calculate disparity map, user has to use the camera take two picture with different angles. The first picture is saved into SD RAM, 
 
-
-This is the final project of NTUEE IC design Lab (EE4003).
 We reference [1] for algorithm and [2] for hardware structure. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
 
-![png](img/block_diagram.png "Block Diagram")
+![png](img/block_diagram.png "Fig. Block Diagram")
 
 
 # Algorithm
 We adopted the proposed method in [1], and it consists of three parts:
 #### 1. Sum of Absolute Difference (SAD) algorithm
-The SAD algorithm is a correlation-based method with high computational efficency. Given a pixel $(x,y)$ in left image and maximum value of user-defined maximum disparity $d_{max}$, and correlation index $Crl(x,y,s)$ is calculated for each displacement $S$ of the correlation window in right image by:
+The SAD algorithm is a correlation-based method with high computational efficiency. Given a pixel $(x,y)$ in left image and maximum value of user-defined maximum disparity $d_{max}$, and correlation index $Crl(x,y,s)$ is calculated for each displacement $S$ of the correlation window in right image by:
 
 {{< math >}}
 $$ Crl(x,y,s) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
@@ -31,7 +27,8 @@ $$ Crl(x,y,s) = \sum_{u=-w,v=-w}^{u=w,v=-w}|I_l(x+u,u+v) - I_r(x+u+s,y+v)|$$
 
 And for the pixel $(x,y)$, its disparity can be determined by 
 {{< math >}}
-$$ d(x,y) = $argmin_s Crl(x,y,s) $$
+<!-- $$ d(x,y) = argmin_s Crl(x,y,s) $$ -->
+$$ d(x,y) = \mathop{\arg\min}_{s} Crl(x,y,s)$$
 {{< /math >}}
 
 #### 2. Edge distance
