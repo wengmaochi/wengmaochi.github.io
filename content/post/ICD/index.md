@@ -18,6 +18,7 @@ We reference [1] for hardware structure and [2] for algorithm. After some adjust
 
 # Background of Elliptic Curve Cryptography(ECC)
 The chip design for this instance involves the use of a randomly selected constant 'k' to perform scalar multiplication on elliptic curves, resulting in the generation of the public key. 
+
 Elliptic Curve Cryptography (ECC) is a public-key encryption algorithm based on elliptic curve mathematics. ECC's primary advantage is that, compared to the RSA encryption algorithm, it achieves a similar level of security with smaller key lengths.
 
 ![png](F1.png)
