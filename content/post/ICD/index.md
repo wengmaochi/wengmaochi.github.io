@@ -59,8 +59,16 @@ The memory is designed with eight registers as the maximum memory capacity. The 
 ![png](mul.png "Fig. Multiplier unit")
 # Place&Route Result
 ![png](APR.png "Fig. Snapshot of the design after P&R.")
+
+# Layout Verification
+
+The layout verification (DRC) should be run on TSRI’s queue server under their tape-out protocol.
+
+The LVS test can be run locally by Calibre.
+
 # Tape-out Spec
-![png](image-1.png)
+![png](image-1.png "Fig. Tape-out spec")
+
 # Reference
 [1] KASHIF, Muhammad; CICEK, Ihsan; IMRAN, Malik. A Hardware Efficient Elliptic Curve Accelerator for FPGA Based Cryptographic Applications. In: 2019 11th International Conference on Electrical and Electronics Engineering (ELECO). IEEE, 2019. p. 362-366.
 
