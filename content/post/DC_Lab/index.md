@@ -56,8 +56,9 @@ d(x,y) & \text{if } \psi(x,y) == 1.\end{cases}$$
 {{</math>}}
 
 # Hardware Implementation
-![png](img/DCLab_final_FSM.drawio.png "Finite state machine")
-
+![png](img/DCLab_final_FSM.drawio.png "Fig. Finite state machine")
+### Window buffer
+To make sure 
 
 # Reference
 [1] A. Aguilar-González, M. Pérez-Patricio, M. Arias-Estrada, J. -L. Camas-Anzueto, H. -R. Hernández-de León and A. Sánchez-Alegría, "An FPGA Correlation-Edge Distance approach for disparity map," 2015 International Conference on Electronics, Communications and Computers (CONIELECOMP), Cholula, Mexico, 2015, pp. 21-28, doi: 10.1109/CONIELECOMP.2015.7086952. 

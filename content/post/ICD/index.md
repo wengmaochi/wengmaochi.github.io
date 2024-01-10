@@ -1,13 +1,14 @@
 ---
 title: Elliptic Curve Cryptography Chip (Tape-out)
+subtitle: This is the final project of NTUEE IC design Lab (EE4003). In collaboration with Y.C. Yu, C.L. Hsieh.
 date: 2022-06-01
 math: true
 image:
-  placement: 2
-  caption: 'overview of RCTP'
+  placement: 4
+  caption: ''
 ---
 
-This is the final project of NTUEE IC design Lab (EE4003).
+
 
 # Introduction
 The aim of this project is to implement an accelerator for Elliptic Curve Crypotography(ECC), and go through all procedure of chip manufacturing. 
