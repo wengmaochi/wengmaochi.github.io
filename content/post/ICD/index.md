@@ -51,12 +51,14 @@ We adopt ECC-163 standard with polynomial basis $x^{163}+x^7+x^6+x^3+1$. For eve
 
 
 # Hardware Implementation
-
+The design of this chip emulates a simple CPU structure, employing a SISD approach. The control module regulates this process by providing signals to MUX and deMUX. The execution is divided into three main parts: Read Memory, Execute, and Write Back. Considering the hazards arising from reading and writing to the same memory and the critical path during calculations, the architecture adds additional registers before data enters the arithmetic module. This design aims to prevent conflicts and reduce the critical path length.
 ![png](hardware.png "Fig. Chip architecture")
+The memory is designed with eight registers as the maximum memory capacity. The maximum memory requirements are eight in total, composed of X1, X2, Z1, Z2 representing initial point information, and additional results T1, T2, T3, T4 needed during the computation process. The maximum additional memory demand arises from the reciprocal calculation, requiring three extra memory units for each reciprocal operation. After analyzing the most resource-intensive part of the algorithm, we found eight registers are enough. Consequently, in its design, the memory section of this chip is composed of eight registers.
+
 
 ![png](mul.png "Fig. Multiplier unit")
 # Place&Route Result
-
+![png](APR.png "Fig. Snapshot of the design after P&R.")
 # Tape-out Spec
 
 # Reference
