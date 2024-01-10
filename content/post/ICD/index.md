@@ -4,7 +4,7 @@ subtitle: This is the final project of NTUEE IC design Lab (EE4003). In collabor
 date: 2022-06-01
 math: true
 image:
-  placement: 4
+  placement: 2
   caption: ''
 ---
 
