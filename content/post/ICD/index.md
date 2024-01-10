@@ -25,7 +25,7 @@ In this chip, we accelerate the two most crucial operations in both ECC encrypti
 #### $a*b$ 
 * Same as ordinary multiplication, but no carry-in when doing addition.
 #### $a^2$
-* Insert zero between each bit, for example: $P = 0111, 2P = 0010101$ 
+* Insert zero between each bit, for example: $a = 0111, a^2 = 0010101$ 
 ## Devision 
 #### $a/b$
 * We calculate 1/b by Itoh-Tsuji Algorithm and then conduct a * 1/b.
