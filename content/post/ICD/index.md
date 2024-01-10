@@ -17,19 +17,18 @@ We reference [1] for hardware structure and [2] for algorithm. After some adjust
 ![png](design_flow.png "Fig. The design flow of our design")
 
 # Background of Elliptic Curve Cryptography(ECC)
-The chip design for this instance involves the use of a randomly selected constant 'k' to perform scalar multiplication on elliptic curves, resulting in the generation of the public key. 
+<!-- The chip design for this instance involves the use of a randomly selected constant 'k' to perform scalar multiplication on elliptic curves, resulting in the generation of the public key.  -->
 
 Elliptic Curve Cryptography (ECC) is a public-key encryption algorithm based on elliptic curve mathematics. ECC's primary advantage is that, compared to the RSA encryption algorithm, it achieves a similar level of security with smaller key lengths.
 
-![png](F1.png)
+
 The security of ECC encryption systems relies on the difficulty of reversing scalar multiplication. Assuming one party selects a number 'k' and a starting point 'P,' performs scalar multiplication to obtain 'kP,' and then transmits it, a third party would find it challenging to reverse the operation and obtain the values of 'k' or 'P' from 'kP.' The diagram below illustrates the interaction between the Message Receiver (A) and Message Sender (B), demonstrating the encryption effectiveness achieved during the information transmission process in the ECC system. It also highlights that even if a third party (Public World) intercepts the transmitted data, it is difficult to retrieve the original information.
-
-![png](F2.png )
-
+![png](F1.png "The process of transmitting messages in an Elliptic Curve Cryptography (ECC) system")
 
 
-<!-- In this chip, we accelerate the two most crucial operations in both ECC encryption and decryption - point operations and point doubling in polynomial basis over binary finite field $GF(2^m)$. In polynomial basis over $GF(2^m)$, we have to first set a polynomial basis. (e.g. $P(x) = p_mx^m+p_{m-1}x^{m-1}+...+p_1x^1+p_0$. Then all the numbers 
- -->
+![png](F2.png "Overview of ECC ")
+
+
 
 
 Below I list how we realize $GF(2^m)$ arithematics,
@@ -53,6 +52,9 @@ We adopt ECC-163 standard with polynomial basis $x^{163}+x^7+x^6+x^3+1$. For eve
 
 # Hardware Implementation
 
+![png](hardware.png "Fig. Architecture of the whole chip")
+
+![png](mul.png "Fig. Multiplier unit")
 # Place&Route Result
 
 # Tape-out Spec
