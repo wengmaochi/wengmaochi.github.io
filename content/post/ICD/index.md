@@ -56,12 +56,11 @@ The design of this chip emulates a simple SISD CPU structure. The control module
 ![png](hardware.png "Fig. Chip architecture")
 The memory is designed with eight registers as the maximum memory capacity. The maximum memory requirements are eight in total, composed of X1, X2, Z1, Z2 representing initial point information, and additional results T1, T2, T3, T4 needed during the computation process. The maximum additional memory demand arises from the reciprocal calculation, requiring three extra memory units for each reciprocal operation. After analyzing the most resource-intensive part of the algorithm, we found eight registers are enough. Consequently, in its design, the memory section of this chip is composed of eight registers.
 
-
 ![png](mul.png "Fig. Multiplier unit")
 # Place&Route Result
 ![png](APR.png "Fig. Snapshot of the design after P&R.")
 # Tape-out Spec
-
+![png](image-1.png)
 # Reference
 [1] KASHIF, Muhammad; CICEK, Ihsan; IMRAN, Malik. A Hardware Efficient Elliptic Curve Accelerator for FPGA Based Cryptographic Applications. In: 2019 11th International Conference on Electrical and Electronics Engineering (ELECO). IEEE, 2019. p. 362-366.
 
