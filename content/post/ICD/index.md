@@ -45,9 +45,10 @@ Below I list how we realize $GF(2^m)$ arithematics,
 ## Devision 
 #### $a/b$
 * We calculate $b^{-1}$ by Itoh-Tsuji Algorithm and Fermat's little theorem and then conduct $a * b^{-1}$.
-* Fermat's little theorem: $$b \in GF(2^{163}), b^{-1} = b^{2^{163} -2} = b^2^{1} * b^2^{2} * ... * b^2^{162} $$ In this way, reciprocal computation can be accomplished through 161 multiplications and 162 square operations.
+* Fermat's little theorem: $$b \in GF(2^{163}), b^{-1} = b^{2^{163} -2} = b^2^{1} * b^2^{2} * b^2^{162} $$
+In this way, reciprocal computation can be accomplished through 161 multiplications and 162 square operations.
 * Itoh-Tsuji Algorithm: To reduce the number of time-comsuming multiplications, we adopted Itoh-Tsuki Algorithm to achieve reciprocal computation by 9 multiplications and 162 square operations. This algorithm defines $\beta_k = a^{2^k-1}, k \in \N$. 
-$$\forall k,j \in \N, \beta_{k+j} = \beta_{k}^{2^j} * \beta_j.$$ Through this property, the number of multiplication operations can be reduced using an addition chain of length $t$. Define the addition chain $U = (u_0, u_1, u_2, ..., u_t)$, where $u_0 = 1, u_t = m-1$. The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i = u_(k_i) + u_(j_i)$. The reciprocal computation can be obtained through the following algorithm:
+$$\forall k,j \in \N, \beta_{k+j} = \beta_{k}^{2^j} * \beta_j.$$ Through this property, the number of multiplication operations can be reduced using an addition chain of length $t$. Define the addition chain $U = (u_0, u_1, u_2, ..., u_t)$, where $u_0 = 1, u_t = m-1$. The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i = u_{k_i} + u_{j_i}$. The reciprocal computation can be obtained through the following algorithm:
 
 
 ## Modular polynomial
