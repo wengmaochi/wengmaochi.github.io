@@ -23,11 +23,11 @@ We reference [1] for hardware structure and [2] for algorithm. After some adjust
 Elliptic Curve Cryptography (ECC) is a public-key encryption algorithm based on elliptic curve mathematics. ECC's primary advantage is that, compared to the RSA encryption algorithm, it achieves a similar level of security with smaller key lengths.
 
 
-The security of ECC encryption systems relies on the difficulty of reversing scalar multiplication. Assuming one party selects a number 'k' and a starting point 'P,' performs scalar multiplication to obtain 'kP,' and then transmits it, a third party would find it challenging to reverse the operation and obtain the values of 'k' or 'P' from 'kP.' The diagram below illustrates the interaction between the Message Receiver (A) and Message Sender (B), demonstrating the encryption effectiveness achieved during the information transmission process in the ECC system. It also highlights that even if a third party (Public World) intercepts the transmitted data, it is difficult to retrieve the original information.
-![png](F1.png "The process of transmitting messages in an Elliptic Curve Cryptography (ECC) system")
+The security of ECC encryption systems relies on the difficulty of reversing scalar multiplication. Assuming one party selects a number $k$ and a starting point $P$, performs scalar multiplication to obtain $kP$, and then transmits it, a third party would find it challenging to reverse the operation and obtain the values of $k$ or $P$ from $kP$. The diagram below illustrates the interaction between the Message Receiver (A) and Message Sender (B), demonstrating the encryption effectiveness achieved during the information transmission process in the ECC system. It also highlights that even if a third party (Public World) intercepts the transmitted data, it is difficult to retrieve the original information.
+![png](F1.png "Fig. The process of transmitting messages in an Elliptic Curve Cryptography (ECC) system")
 
 
-![png](F2.png "Overview of ECC ")
+![png](F2.png "Fig. Overview of ECC ")
 
 
 
@@ -44,8 +44,11 @@ Below I list how we realize $GF(2^m)$ arithematics,
 * Insert zeros between each bit, for example: $a = 0111, a^2 = 0010101$ 
 ## Devision 
 #### $a/b$
-* We calculate $1/b$ by Itoh-Tsuji Algorithm and then conduct $a * 1/b$.
-* Itoh-Tsuji Algorithm: 
+* We calculate $b^{-1}$ by Itoh-Tsuji Algorithm and Fermat's little theorem and then conduct $a * b^{-1}$.
+* Fermat's little theorem: $$b \in GF(2^{163}), b^{-1} = b^{2^{163} -2} = b^2^{1} * b^2^{2} * ... * b^2^{162} $$ In this way, reciprocal computation can be accomplished through 161 multiplications and 162 square operations.
+* Itoh-Tsuji Algorithm: To reduce the number of time-comsuming multiplications, we adopted Itoh-Tsuki Algorithm to achieve reciprocal computation by 9 multiplications and 162 square operations. This algorithm defines $\beta_k = a^{2^k-1}, k \in \N$. 
+$$\forall k,j \in \N, \beta_{k+j} = \beta_{k}^{2^j} * \beta_j.$$ Through this property, the number of multiplication operations can be reduced using an addition chain of length $t$. Define the addition chain $U = (u_0, u_1, u_2, ..., u_t)$, where $u_0 = 1, u_t = m-1$. The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i = u_(k_i) + u_(j_i)$. The reciprocal computation can be obtained through the following algorithm:
+
 
 ## Modular polynomial
 We adopt ECC-163 standard with polynomial basis $x^{163}+x^7+x^6+x^3+1$. For every number, it is 163-bit and its i-th bit reprsent x^i. If arithematic result exceeds 163 bits, the number has to mod the polynomial basis $x^{163}+x^7+x^6+x^3+1$.
