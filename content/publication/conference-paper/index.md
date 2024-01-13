@@ -35,7 +35,10 @@ abstract: Vision transformer (ViT) has shown great potential in computer vision 
 # Summary. An optional shortened abstract.
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
-tags: [Vision Transformer]
+tags: 
+ - Vision Transformer
+ - Hardware-aware Machine Learning
+ - Token Pruning
 
 # Display this page in the Featured widget?
 featured: True 
