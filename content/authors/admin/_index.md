@@ -131,6 +131,4 @@ highlight_name: true
 I am currently a senior EE student at National Taiwan University(NTU). My research interests include computer architecture/VLSI design, hardware accelerator for machine learning workloads, ML SW/HW co-design, and agile hardware methodology.
 
 I am fortunate to have worked with Prof. An-Yeu on **hardware-friendly efficient vision transformer**, and Prof. Yi-Chang Lu on **genomic aligment accelerator** in my undergraduate research. During my internship at the Industrial Technology Research Institute, I explored open-source end-to-end frameworks and compile algorithm for Coarse-Grained Reconfigurable Array (CGRA). 
-
-
 {style="text-align: justify;"}
