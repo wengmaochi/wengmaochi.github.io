@@ -54,9 +54,9 @@ The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i
 Input: An element $a$, an addition chain $U$ and its associated sequence $V$
 Output: $a^{-1}$
 
-$$Procedure ITMIA{a, {U,V}}{
-  for i from i to t do: 
-  b_ui
+$$Procedure \space ITMIA{a, {U,V}}{$$
+$$  for i from i to t do: $$
+$$  b_ui$$
 }
 $$
 
