@@ -153,7 +153,7 @@ sections:
     design:
       # Choose a layout view
       view: compact
-      columns: '1' #2 
+      columns: '2' #2 
 
   # - block: portfolio
   #   id: projects
