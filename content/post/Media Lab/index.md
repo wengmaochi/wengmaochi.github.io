@@ -6,6 +6,8 @@ image:
   placement: 4
   caption: ''
 summary: "This is the final project of NTUEE Network & Multimedia Laboratory (EE3002)."
+tags:
+  - IoT
 ---
 This is the final project of NTUEE Network & Multimedia Laboratory (EE3002).
 In collaboration with H.L. Hsieh, C.C. Hsu.

@@ -7,6 +7,11 @@ image:
   placement: 4
   caption: 'credit: https://github.com/ecolab-nus/panorama'
 summary: "This is the side project during internship at the Industrial Technology Research Institute."
+tags:
+  - CGRA
+  - Compile
+  - Agile Hardware Methodology
+  - Reconfigurable Array
 ---
 <!-- This is the side project during internship at the Industrial Technology Research Institute.  -->
 
