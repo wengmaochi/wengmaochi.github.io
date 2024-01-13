@@ -60,7 +60,7 @@ $$c_k = s_k + s_{163+k} + s_{156+k} + s_{157+k} + s_{160+k} + s_{312+k} + s_{314
 $$c+6 = s_6 + s_{169} + s_{163} + s_{166} + s_{322} + s_{319} + s_{320}$$
 $$c_m = s_m + s_{163+m} + s_{160+m}+ s_{319+m} + s_{316+m} + s_{317+m}, 3 \leq m \leq 5 $$
 $$c_2 = s_2 + s_{165} + s_{321} + s_{322} $$
-$$c_n = s_n + s_{163+n} + s_{319+n} + s_{320+n} + s_{323_n}, 0 \leq n \leq 1 $$
+$$c_n = s_n + s_{163+n} + s_{319+n} + s_{320+n} + s_{323_n}, 0 \leq n \leq 1$$
 
 # Hardware Implementation
 The design of this chip emulates a simple SISD CPU structure. The control module regulates this process by providing signals to MUX and deMUX. The execution is divided into three main parts: Read Memory, Execute, and Write Back. Considering the hazards arising from reading and writing to the same memory and the critical path during calculations, the architecture adds additional registers before data enters the arithmetic module. This design aims to prevent conflicts and reduce the critical path length.
