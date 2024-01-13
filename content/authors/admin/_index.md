@@ -96,7 +96,7 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '/#contact'
+    link: 'mailto:tom1107tom80@gmail.com'
   # - icon: twitter
   #   icon_pack: fab
   #   link: https://twitter.com/GeorgeCushen
@@ -126,6 +126,8 @@ highlight_name: true
 ---
 
 <!-- Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks. -->
+
+
 I am currently a senior EE student at National Taiwan University(NTU). My research interests include computer architecture, ML accelerator, ML SW/HW co-design.
 I am fortunate to have worked with Prof. An-Yeu on **genetic sequencing accelerator**, and Prof. Shao-Yi Chien on **DNN accelerator on computer vision application** in my undergraduate research.
 {style="text-align: justify;"}
