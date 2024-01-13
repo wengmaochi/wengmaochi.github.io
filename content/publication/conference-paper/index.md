@@ -33,7 +33,7 @@ publication_short: Submitted to IEEE ISCAS 2024
 abstract: Vision transformer (ViT) has shown great potential in computer vision tasks. However, intensive computation requirements with respect to the token size hinder ViT from being deployed on edge devices with diverse computation resources. Recently, token pruning has been a promising method to exploit the redundancy of tokens. However, it often requires a laborious retraining process to meet different resource constraints. In this paper, we introduce Fisher information (FI) from tokens to evaluate token importance across different transformer blocks and propose a Retraining-free Constraint-aware Token Pruning (RCTP) framework. RCTP employs a two-step process to obtain the optimal pruning thresholds without retraining under different FLOPs constraints. Firstly, a candidate threshold table and a FLOPs-Fisher table are constructed through a three-stage pipeline to record the trade-off between FLOPs and FI loss of each candidate threshold. Secondly, a modified Viterbi algorithm determines optimal threshold sets with minimum overall FI loss under various FLOPs-constraints in one shot. Our experiment shows that RCTP attains better accuracy-FLOPs trade-off than prior pruning-based approaches.
 
 # Summary. An optional shortened abstract.
-summary: 
+summary:  In this paper, we introduce Fisher information (FI) from tokens to evaluate token importance across different transformer blocks and propose a Retraining-free Constraint-aware Token Pruning (RCTP) framework. RCTP employs a two-step process to obtain the optimal pruning thresholds without retraining under different FLOPs constraints.
 
 tags: 
  - Vision Transformer
