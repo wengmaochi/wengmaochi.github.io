@@ -15,7 +15,7 @@ summary: This is the final project of NTUEE IC design Lab (EE4003). In collabora
 The aim of this project is to implement an accelerator for Elliptic Curve Crypotography(ECC), and go through all procedure of chip manufacturing. 
 
 We reference [1] for hardware structure and [2] for algorithm. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
-![png](design_flow.png "Fig. The design flow of our design")
+![png](design_flow.png "Fig.1 The design flow of our design")
 
 # Background of Elliptic Curve Cryptography(ECC)
 <!-- The chip design for this instance involves the use of a randomly selected constant 'k' to perform scalar multiplication on elliptic curves, resulting in the generation of the public key.  -->
@@ -24,10 +24,10 @@ Elliptic Curve Cryptography (ECC) is a public-key encryption algorithm based on 
 
 
 The security of ECC encryption systems relies on the difficulty of reversing scalar multiplication. Assuming one party selects a number $k$ and a starting point $P$, performs scalar multiplication to obtain $kP$, and then transmits it, a third party would find it challenging to reverse the operation and obtain the values of $k$ or $P$ from $kP$. The diagram below illustrates the interaction between the Message Receiver (A) and Message Sender (B), demonstrating the encryption effectiveness achieved during the information transmission process in the ECC system. It also highlights that even if a third party (Public World) intercepts the transmitted data, it is difficult to retrieve the original information.
-![png](F1.png "Fig. The process of transmitting messages in an Elliptic Curve Cryptography (ECC) system")
+![png](F1.png "Fig.2 The process of transmitting messages in an Elliptic Curve Cryptography (ECC) system")
 
 
-![png](F2.png "Fig. Overview of ECC ")
+![png](F2.png "Fig.3 Overview of ECC ")
 
 
 
@@ -67,9 +67,9 @@ The design of this chip emulates a simple SISD CPU structure. The control module
 ![png](hardware.png "Fig. Chip architecture")
 The memory is designed with eight registers as the maximum memory capacity. The maximum memory requirements are eight in total, composed of X1, X2, Z1, Z2 representing initial point information, and additional results T1, T2, T3, T4 needed during the computation process. The maximum additional memory demand arises from the reciprocal calculation, requiring three extra memory units for each reciprocal operation. Consequently, after analyzing the most resource-intensive part of the algorithm, we decided to use eight registers in the memory unit.
 
-![png](mul.png "Fig. Multiplier unit")
+![png](mul.png "Fig.4 Multiplier unit")
 # Place&Route Result
-![png](APR.png "Fig. Snapshot of the design after P&R.")
+![png](APR.png "Fig.5 Snapshot of the design after P&R.")
 
 # Layout Verification
 
@@ -78,7 +78,7 @@ The layout verification (DRC) should be run on TSRI’s queue server under their
 The LVS test can be run locally by Calibre.
 
 # Tape-out Spec
-![png](image-1.png "Fig. Tape-out spec")
+![png](image-1.png "Fig.6 Tape-out spec")
 
 # Reference
 [1] KASHIF, Muhammad; CICEK, Ihsan; IMRAN, Malik. A Hardware Efficient Elliptic Curve Accelerator for FPGA Based Cryptographic Applications. In: 2019 11th International Conference on Electrical and Electronics Engineering (ELECO). IEEE, 2019. p. 362-366.
