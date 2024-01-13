@@ -139,9 +139,9 @@ sections:
       filters:
         folders:
           - post
-        author: "k"
-        category: "kkk"
-        tag: "jj"
+        author: ""
+        category: ""
+        tag: ""
         exclude_featured: false
         exclude_future: false
         exclude_past: false
