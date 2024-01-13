@@ -32,7 +32,7 @@ The security of ECC encryption systems relies on the difficulty of reversing sca
 
 
 
-Below I list how we realize $GF(2^m)$ arithematics,
+Below I skip mathematical proof and only list how we realize $GF(2^m)$ arithematics:
 
 
 ## Addition&Subtraction

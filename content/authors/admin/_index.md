@@ -130,4 +130,6 @@ highlight_name: true
 
 I am currently a senior EE student at National Taiwan University(NTU). My research interests include computer architecture, ML accelerator, ML SW/HW co-design.
 I am fortunate to have worked with Prof. An-Yeu on **genetic sequencing accelerator**, and Prof. Shao-Yi Chien on **DNN accelerator on computer vision application** in my undergraduate research.
+
+
 {style="text-align: justify;"}
