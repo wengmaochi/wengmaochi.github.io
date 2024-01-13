@@ -6,6 +6,7 @@ image:
   placement: 4
   caption: ''
 summary: "This is the final project of NTUEE Digital Circuit Laboratory (EE3016). In collaboration with H.L. Hsieh, S.C. Yang."
+tag: "s"
 ---
 
 # Introduction
