@@ -1,9 +1,9 @@
 ---
 # Display name
-title: Mao-Chi (Tom) Weng
+title: Mao-Chi Weng
 
 # Name pronunciation (optional)
-# name_pronunciation: Chien Shiung Wu
+name_pronunciation: Tom
 
 # Full name (for SEO)
 first_name: Mao-Chi 
