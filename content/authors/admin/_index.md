@@ -25,14 +25,14 @@ organizations:
     url: https://www.ntu.edu.tw/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include lll.
+bio: My research interests include computer architecture, hardware accelerator for ML workload, agile hardware methodology. Currently looking for Ph.D. Fall 2024 program. 
 
 # Interests to show in About widget
 interests:
   - Computer Architecture
   - Hardware Accelerator for Machine Learning Workloads 
   - Machine Learning SW/HW Co-design
-
+  - Agile Hardware Methodology
 # Education to show in About widget
 education:
   courses:
