@@ -3,7 +3,7 @@
 title: Mao-Chi Weng
 
 # Name pronunciation (optional)
-name_pronunciation: Tom
+# name_pronunciation: Tom
 
 # Full name (for SEO)
 first_name: Mao-Chi 
