@@ -49,20 +49,18 @@ Below I list how we realize $GF(2^m)$ arithematics,
 In this way, reciprocal computation can be accomplished through 161 multiplications and 162 square operations.
 * Itoh-Tsuji Algorithm: To reduce the number of time-comsuming multiplications, we adopted Itoh-Tsuki Algorithm to achieve reciprocal computation by 9 multiplications and 162 square operations. This algorithm defines $\beta_k = a^{2^k-1}, k \in \mathbb{N}$. 
 $$\forall k,j \in 	\mathbb{N}, \beta_{k+j} = \beta_{k}^{2^j} * \beta_j.$$ Through this property, the number of multiplication operations can be reduced using an addition chain of length $t$. Define the addition chain $U = (u_0, u_1, u_2, ..., u_t)$, where $u_0 = 1, u_t = m-1.$ 
-The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i = u_{k_i} + u_{j_i}.$ The reciprocal computation can be obtained through the following algorithm:
-
-Input: An element $a$, an addition chain $U$ and its associated sequence $V$
-Output: $a^{-1}$
-
-$$Procedure \space ITMIA{a, {U,V}}{$$
-$$  for i from i to t do: $$
-$$  b_ui$$
-}
-$$
+The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i = u_{k_i} + u_{j_i}.$ We use addition $U = (1,2,4,8,16,32,64,80,81,162)$, and $V = ((0,0),(1,1),(2,2),(3,3),(4,4),(5,5),(6,4),(7,0),(8,8))$
 
 ## Modular polynomial
-We adopt ECC-163 standard with polynomial basis $x^{163}+x^7+x^6+x^3+1$. For every number, it is 163-bit and its i-th bit reprsent x^i. If arithematic result exceeds 163 bits, the number has to mod the polynomial basis $x^{163}+x^7+x^6+x^3+1$.
-
+Since the results of multiplication and square operation will exceed 163 bits, the results need to be modulo by the polynomial basis $x^{163}+x^7+x^6+x^3+1$. 
+$$c_162 = s_162 +s_318+ s_319+s_322$$
+$$c_i = s_i + s_{163+i} + s_{156_i}+ s_{157+i} + s_{160+i}, 13 \leq i \leq 161$$
+$$c_j = s_j + s_{163+j} + s_{156+j} + s_{157+j} + s_{160+j} + s_{312+j}, 11 \leq j \leq 12$$
+$$c_k = s_k + s_{163+k} + s_{156+k} + s+{157+k} + s_{160+k} + s_{312+k} + s_{314+k}, 7 \leq k \leq 10$$
+$$c+6 = s_6 + s_169 + s_163 + s_166 + s_322 + s_319 + s_320$$
+$$c_m = s_m + s_{163+m} + s_{160+m}+ s_{319+m} + s_{316+m} + s_{317+m}, 3 \leq m \leq 5$$
+$$c_2 = s_2 + s_165 + s_321 + s_322$$
+$$c_n = s_n + s_{163+n} + s_{319+n} + s_{320+n} + s_{323_n}, 0 \leq n \leq 1 
 
 # Hardware Implementation
 The design of this chip emulates a simple SISD CPU structure. The control module regulates this process by providing signals to MUX and deMUX. The execution is divided into three main parts: Read Memory, Execute, and Write Back. Considering the hazards arising from reading and writing to the same memory and the critical path during calculations, the architecture adds additional registers before data enters the arithmetic module. This design aims to prevent conflicts and reduce the critical path length.
