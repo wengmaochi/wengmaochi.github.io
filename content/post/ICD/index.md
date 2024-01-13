@@ -10,7 +10,7 @@ summary: This is the final project of NTUEE IC design Lab (EE4003). In collabora
 tags:
   - VLSI
   - Hardware Accelerator
-  - Degital Design
+  - Digital Design
 ---
 
 
