@@ -7,6 +7,9 @@ image:
   caption: ''
 
 summary: This is the final project of NTUEE IC design Lab (EE4003). In collaboration with Y.C. Yu, C.L. Hsieh.
+tags:
+  - VLSI
+  - Hardware Accelerator
 ---
 
 
