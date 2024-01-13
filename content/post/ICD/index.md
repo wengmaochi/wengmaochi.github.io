@@ -53,13 +53,13 @@ The related sequence $V = ((k_1, j_1), (k_2, j_2), ..., (k_t, j_t))$, where $u_i
 
 ## Modular polynomial
 Since the results of multiplication and square operation will exceed 163 bits, the results need to be modulo by the polynomial basis $x^{163}+x^7+x^6+x^3+1$. 
-$$c_162 = s_162 +s_318+ s_319+s_322$$
+$$c_{162} = s_{162} +s_{318}+ s_{319}+s_{322}$$
 $$c_i = s_i + s_{163+i} + s_{156_i}+ s_{157+i} + s_{160+i}, 13 \leq i \leq 161$$
 $$c_j = s_j + s_{163+j} + s_{156+j} + s_{157+j} + s_{160+j} + s_{312+j}, 11 \leq j \leq 12$$
 $$c_k = s_k + s_{163+k} + s_{156+k} + s+{157+k} + s_{160+k} + s_{312+k} + s_{314+k}, 7 \leq k \leq 10$$
-$$c+6 = s_6 + s_169 + s_163 + s_166 + s_322 + s_319 + s_320$$
+$$c+6 = s_6 + s_{169} + s_{163} + s_{166} + s_{322} + s_{319} + s_{320}$$
 $$c_m = s_m + s_{163+m} + s_{160+m}+ s_{319+m} + s_{316+m} + s_{317+m}, 3 \leq m \leq 5$$
-$$c_2 = s_2 + s_165 + s_321 + s_322$$
+$$c_2 = s_2 + s_{165} + s_{321} + s_{322}$$
 $$c_n = s_n + s_{163+n} + s_{319+n} + s_{320+n} + s_{323_n}, 0 \leq n \leq 1 
 
 # Hardware Implementation
