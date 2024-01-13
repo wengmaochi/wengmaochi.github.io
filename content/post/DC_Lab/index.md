@@ -9,6 +9,7 @@ summary: "This is the final project of NTUEE Digital Circuit Laboratory (EE3016)
 tags:
   - Computer Vision
   - FPGA
+  - Digital Design
 ---
 
 # Introduction
