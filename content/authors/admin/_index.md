@@ -31,7 +31,7 @@ bio: My research interests include computer architecture, hardware accelerator f
 interests:
   - Computer Architecture
   - Hardware Accelerator for Machine Learning Workloads 
-  - Machine Learning SW/HW Co-design
+  - ML SW/HW Co-design
   - Agile Hardware Methodology
 # Education to show in About widget
 education:
