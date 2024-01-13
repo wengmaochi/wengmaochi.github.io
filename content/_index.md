@@ -139,9 +139,9 @@ sections:
       filters:
         folders:
           - post
-        author: ""
-        category: ""
-        tag: ""
+        author: "k"
+        category: "kkk"
+        tag: "jj"
         exclude_featured: false
         exclude_future: false
         exclude_past: false
@@ -153,7 +153,7 @@ sections:
     design:
       # Choose a layout view
       view: compact
-      columns: '1'
+      columns: '1' #2 
 
   # - block: portfolio
   #   id: projects
