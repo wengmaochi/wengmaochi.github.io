@@ -5,9 +5,9 @@ math: true
 image:
   placement: 4
   caption: ''
-summary: "This is the final project of NTUEE Network & Multimedia Laboratory (EE-3002)."
+summary: "This is the final project of NTUEE Network & Multimedia Laboratory (EE3002)."
 ---
-This is the final project of NTUEE Network & Multimedia Laboratory (EE-3002).
+This is the final project of NTUEE Network & Multimedia Laboratory (EE3002).
 In collaboration with H.L. Hsieh, C.C. Hsu.
 
 ## Introduction
