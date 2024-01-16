@@ -102,20 +102,20 @@ sections:
           date_end: ''
           date_start: '2021-01-25'
           description: ''
-          icon: coursera
+          icon: national-taiwan-university-seeklogo.com-3
           organization: Dept. Electrical Engineering, National Taiwan University
           organization_url: https://www.coursera.org
           title: Deans List's Award
           url: ''
-  #       - certificate_url: https://www.edx.org
-  #         date_end: ''
-  #         date_start: '2021-01-01'
-  #         description: Formulated informed blockchain models, hypotheses, and use cases.
-  #         icon: edx
-  #         organization: edX
-  #         organization_url: https://www.edx.org
-  #         title: Blockchain Fundamentals
-  #         url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+        - certificate_url: https://www.edx.org
+          date_end: ''
+          date_start: '2021-01-01'
+          description: 'Ungraduate-Level Cell-Based Digital Circuit Design Category'
+          icon: edx
+          organization: 2022 Integrated Circuit Design Contest 
+          organization_url: https://www.edx.org
+          title: Second Prize Award
+          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
   #       - certificate_url: https://www.datacamp.com
   #         date_end: '2020-12-21'
   #         date_start: '2020-07-01'
