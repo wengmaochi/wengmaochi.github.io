@@ -98,16 +98,16 @@ sections:
   #     #   Leave other parameters empty if not required.
   #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: https://drive.google.com/file/d/1CIY3K3Nu_ve-rJEoeEIhiXOzh3llTLu3/view?usp=sharing
           date_end: ''
           date_start: '2021-01-25'
           description: ''
           icon: national-taiwan-university-seeklogo.com-3
           organization: Dept. Electrical Engineering, National Taiwan University
-          organization_url: https://www.coursera.org
+          organization_url: https://www.ntu.edu.tw
           title: Deans List's Award
-          url: ''
-        - certificate_url: https://www.edx.org
+          url: www.google.com.tw
+        - certificate_url: https://drive.google.com/file/d/1aaC49ICmflQWBIdaPJO2zZrJCS0Uaj1_/view?usp=sharing
           date_end: ''
           date_start: '2021-01-01'
           description: 'Ungraduate-Level Cell-Based Digital Circuit Design Category'
