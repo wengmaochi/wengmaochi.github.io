@@ -59,11 +59,11 @@ d(x,y) & \text{if } \psi(x,y) == 1.\end{cases}$$
 
 # Hardware Implementation
 ![png](img/block_diagram.png "Fig. Block Diagram")
+
+Inside the core, we reference [2] and design the hardware unit to calculate disparity. 
 ![png](img/buffer.png "Fig. Serial in, parallel out buffer, credit from [2]")
-Inside the core, we reference [2] and design the hardware unit to calculate disparity. This is the 
+![png](img/ill.png "Fig. Illustration of the hardware core unit")
 <!-- ![png](img/DCLab_final_FSM.drawio.png "Fig. Finite state machine") -->
-### Window buffer
-To make sure 
 
 
 # Perfermance
