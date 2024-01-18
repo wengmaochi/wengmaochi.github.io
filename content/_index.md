@@ -102,11 +102,11 @@ sections:
           date_end: ''
           date_start: '2021-01-25'
           description: ''
-          icon: national-taiwan-university-seeklogo.com-3
+          # icon: national-taiwan-university-seeklogo.com-3
           organization: Dept. Electrical Engineering, National Taiwan University
           organization_url: https://www.ntu.edu.tw
           title: Deans List's Award
-          url: www.google.com.tw
+          # url: www.google.com.tw
         - certificate_url: https://drive.google.com/file/d/1aaC49ICmflQWBIdaPJO2zZrJCS0Uaj1_/view?usp=sharing
           date_end: ''
           date_start: '2021-01-01'
