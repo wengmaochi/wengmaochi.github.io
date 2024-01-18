@@ -13,7 +13,7 @@ tags:
 ---
 
 # Introduction
-This is a FPGA disparity calculator. It consists of one FPGA, one camera, and one screen. To calculate disparity map, user has to use the camera take two picture with different angles. The first picture is saved into SD RAM, 
+This is a FPGA disparity calculator. It consists of one FPGA, one camera, and one screen. To calculate disparity map, user has to use the camera take two pictures with different angles. These pictures will be temporarily stored in SDRAM and then SRAM. The core unit will calculate the disparity map and store it back in SDRAM. Finally, the VGA unit will read the disparity map from SDRAM and display it on the screen.
 
 We reference [1] for algorithm and [2] for hardware structure. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
 
