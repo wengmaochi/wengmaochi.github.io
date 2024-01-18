@@ -111,7 +111,7 @@ sections:
           date_end: ''
           date_start: '2021-01-01'
           description: 'Won the seconde place out of 134 teams in ungraduate-level cell-based digital circuit design category'
-          icon: edx
+          # icon: edx
           organization: Minister of Education, Taiwan
           organization_url: https://www.edx.org
           title: Second Prize Award,  2022 Integrated Circuit Design Contest 
