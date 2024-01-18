@@ -110,11 +110,11 @@ sections:
         - certificate_url: https://drive.google.com/file/d/1aaC49ICmflQWBIdaPJO2zZrJCS0Uaj1_/view?usp=sharing
           date_end: ''
           date_start: '2021-01-01'
-          description: 'Ungraduate-Level Cell-Based Digital Circuit Design Category'
+          description: 'Won the seconde place out of 134 teams in ungraduate-level cell-based digital circuit design category'
           icon: edx
-          organization: 2022 Integrated Circuit Design Contest 
+          organization: Minister of Education, Taiwan
           organization_url: https://www.edx.org
-          title: Second Prize Award
+          title: Second Prize Award,  2022 Integrated Circuit Design Contest 
           url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
   #       - certificate_url: https://www.datacamp.com
   #         date_end: '2020-12-21'

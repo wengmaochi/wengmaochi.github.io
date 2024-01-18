@@ -17,8 +17,6 @@ This is a FPGA disparity calculator. It consists of one FPGA, one camera, and on
 
 We reference [1] for algorithm and [2] for hardware structure. After some adjustments, we implemented it in RTL level, and follow the design flow below to tape-out and testing. 
 
-![png](img/block_diagram.png "Fig. Block Diagram")
-
 
 # Algorithm
 We adopted the proposed method in [1], and it consists of three parts:
@@ -60,10 +58,16 @@ d(x,y) & \text{if } \psi(x,y) == 1.\end{cases}$$
 {{</math>}}
 
 # Hardware Implementation
-![png](img/DCLab_final_FSM.drawio.png "Fig. Finite state machine")
+![png](img/block_diagram.png "Fig. Block Diagram")
+![png](img/buffer.png "Fig. Serial in, parallel out buffer, credit from [2]")
+Inside the core, we reference [2] and design the hardware unit to calculate disparity. This is the 
+<!-- ![png](img/DCLab_final_FSM.drawio.png "Fig. Finite state machine") -->
 ### Window buffer
 To make sure 
 
+
+# Perfermance
+{{< table path="results.csv" header="true" caption="Table 1: Results" >}}
 # Reference
 [1] A. Aguilar-González, M. Pérez-Patricio, M. Arias-Estrada, J. -L. Camas-Anzueto, H. -R. Hernández-de León and A. Sánchez-Alegría, "An FPGA Correlation-Edge Distance approach for disparity map," 2015 International Conference on Electronics, Communications and Computers (CONIELECOMP), Cholula, Mexico, 2015, pp. 21-28, doi: 10.1109/CONIELECOMP.2015.7086952. 
 
