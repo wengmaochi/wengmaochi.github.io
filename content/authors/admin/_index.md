@@ -25,26 +25,27 @@ organizations:
     url: https://www.ntu.edu.tw/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include computer architecture, hardware accelerator for ML workloads, agile hardware methodology. Currently looking for Ph.D. Fall 2024 program. 
+bio: My research interests include computer architecture, hardware accelerator for ML workloads.
 
 # Interests to show in About widget
 interests:
   - Computer Architecture
   - Hardware Accelerator for Machine Learning Workloads 
   - ML SW/HW Co-design
-  - Agile Hardware Methodology
 # Education to show in About widget
 education:
   courses:
+    - course: PhD Precandidate in Electrical and Computer Engineering
+      institution: University of Michigan
+      year: 2029 (Expected)
     - course: BS in Electrical Engineering
       institution: National Taiwan University
-      year: 2024 (Expected)
-
+      year: 2024 
     - course: International Exchange Student Program
       institution: Leiden University
       year: 2024 
       
-    - course: Currently looking for ECE Ph.D. position
+    
       
 Work Experience:
   - Digital Circuit Research Intern - ITRI
