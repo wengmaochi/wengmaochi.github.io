@@ -132,7 +132,7 @@ I am currently a first-year PhD studnet at LEAPS, University of Michigan.
 
 I earned my bachelor's degree at National Taiwan University(NTU), and I am fortunate to have worked with Prof. An-Yeu on **hardware-friendly efficient vision transformer**, and Prof. Yi-Chang Lu on **genomic aligment accelerator** in my undergraduate research. During my internship at the Industrial Technology Research Institute, I explored open-source end-to-end frameworks and compile algorithm for **Coarse-Grained Reconfigurable Array (CGRA)**. 
 
-My research interests include computer architecture/VLSI design, hardware accelerator for ML workloads, ML SW/HW co-design, and agile hardware methodology.
+My research interests include computer architecture/VLSI design, hardware accelerator for ML workloads, and ML SW/HW co-design.
 
 Feel free to connect with me via maochiw at umich dot edu.
 
