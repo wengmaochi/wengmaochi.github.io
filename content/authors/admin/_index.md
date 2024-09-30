@@ -17,12 +17,12 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Undergraduate Student #/ Digital Circuit Research Intern
+role: PhD Precandidate
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: National Taiwan University
-    url: https://www.ntu.edu.tw/
+  - name: University of Michigan
+    url: https://umich.edu/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include computer architecture, hardware accelerator for ML workloads.
