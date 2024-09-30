@@ -35,7 +35,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD Precandidate in Electrical and Computer Engineering
+    - course: PhD in Electrical and Computer Engineering
       institution: University of Michigan
       year: 2029 (Expected)
     - course: BS in Electrical Engineering
