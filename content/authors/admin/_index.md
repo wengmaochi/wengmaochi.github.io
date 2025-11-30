@@ -120,7 +120,7 @@ social:
   # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: uploads/resume.pdf
+    link: uploads/resume_.pdf
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
@@ -128,11 +128,11 @@ highlight_name: true
 
 <!-- Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks. -->
 
-I am currently a first-year PhD studnet at LEAPS, University of Michigan. 
+I am currently a second-year PhD studnet at LEAPS, University of Michigan. 
 
 I earned my bachelor's degree at National Taiwan University(NTU), and I am fortunate to have worked with Prof. An-Yeu on **hardware-friendly efficient vision transformer**, and Prof. Yi-Chang Lu on **genomic aligment accelerator** in my undergraduate research. During my internship at the Industrial Technology Research Institute, I explored open-source end-to-end frameworks and compile algorithm for **Coarse-Grained Reconfigurable Array (CGRA)**. 
 
-My research interests include computer architecture/VLSI design, hardware accelerator for ML workloads, and ML SW/HW co-design.
+My research interests include computer architecture/VLSI design, hardware accelerator for ML workloads, and 2.5D/3D integration.
 
 Feel free to connect with me via maochiw at umich dot edu.
 
